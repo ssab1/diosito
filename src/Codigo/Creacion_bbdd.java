@@ -154,6 +154,6 @@ public class Creacion_bbdd {
 //      cb.TablaTipoUsuario();
 //      cb.TablaUsuario();
 //      cb.IDTIPOUSUARIO();
-        cb.IDUSUARIO();
+//        cb.IDUSUARIO();
     }
 }
