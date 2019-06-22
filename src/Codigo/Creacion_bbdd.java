@@ -33,6 +33,8 @@ public class Creacion_bbdd {
         
     }//.
     
+    //-----------------------------------------------------------------------------------------------------------------------//
+    
         public void TablaTipoUsuario(){
        
         try{
@@ -76,10 +78,8 @@ public class Creacion_bbdd {
         
     }//
         
-        
-        
-        
-      
+    //--------------------------------------------------------------------------------------------------------------------// 
+    
     public void TablaUsuario(){
        
         try{
@@ -108,6 +108,30 @@ public class Creacion_bbdd {
         System.out.println("tabla creada!!"); 
         
     }//  
+    public void IDUSUARIO(){
+       
+        try{
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(URL);
+            
+            sentencia = conexion.createStatement();
+            String sql = "INSERT INTO USUARIO("+
+                    "NOMBRE, APELLIDO,RUT,SEXO,NOMBRE_USUARIO,CONTRASENA,ID_TIPO)"
+                    + " VALUES('BASTIAN','SANTIBANEZ','20.401.787-5','MASCULINO','SSAB','1234','1')";
+            
+            sentencia.executeUpdate(sql);
+            sentencia.close();
+            conexion.close();
+            
+        }catch(ClassNotFoundException | SQLException e){
+            JOptionPane.showMessageDialog(null, "Error: " + e, 
+                    "Error!!", JOptionPane.ERROR_MESSAGE);
+        }
+        System.out.println("datos ingresados!!"); 
+        
+    }// 
+        
+    //-----------------------------------------------------------------------------------------------------------------//  
         
         
         
@@ -123,15 +147,13 @@ public class Creacion_bbdd {
         
         
         
-        
-        
-        
-        
+      //----------------------------------------------------------------------------------------------------------------//  
         public static void main(String[] args) {
         Creacion_bbdd cb= new Creacion_bbdd();
-//        cb.CrearBD();
-//          cb.TablaTipoUsuario();
-//          cb.TablaUsuario();
-            cb.IDTIPOUSUARIO();
+//      cb.CrearBD();
+//      cb.TablaTipoUsuario();
+//      cb.TablaUsuario();
+//      cb.IDTIPOUSUARIO();
+        cb.IDUSUARIO();
     }
 }
