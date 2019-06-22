@@ -54,6 +54,27 @@ public class Creacion_bbdd {
         System.out.println("tabla creada!!"); 
         
     }//
+    public void IDTIPOUSUARIO(){
+       
+        try{
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(URL);
+            
+            sentencia = conexion.createStatement();
+            String sql = "INSERT INTO TIPO_USUARIO("+
+                    "TIPO_USER) VALUES ( 'ADMINISTRADOR')";
+            
+            sentencia.executeUpdate(sql);
+            sentencia.close();
+            conexion.close();
+            
+        }catch(ClassNotFoundException | SQLException e){
+            JOptionPane.showMessageDialog(null, "Error: " + e, 
+                    "Error!!", JOptionPane.ERROR_MESSAGE);
+        }
+        System.out.println("datos ingresados!!"); 
+        
+    }//
         
         
         
@@ -111,5 +132,6 @@ public class Creacion_bbdd {
 //        cb.CrearBD();
 //          cb.TablaTipoUsuario();
 //          cb.TablaUsuario();
+            cb.IDTIPOUSUARIO();
     }
 }
