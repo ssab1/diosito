@@ -27,7 +27,7 @@ public class Ventana_carga extends javax.swing.JFrame {
                 }
             }
         };
-        t = new Timer(80,al);
+        t = new Timer(100,al);
         initComponents();
         AWTUtilities.setWindowOpaque(this, false);
         t.start();
