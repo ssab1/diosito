@@ -6,6 +6,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 
@@ -108,7 +109,8 @@ public class Creacion_bbdd {
         System.out.println("tabla creada!!"); 
         
     }//  
-    public void IDUSUARIO(){
+    //--------------------------------------------------------------------------------------------------------------------------//
+    public void IDUSUARIO(String nombre,String apellido,String rut,String sexo,String nm_usuario,String contrasena,int id_tip){
        
         try{
             Class.forName(DRIVER);
@@ -117,9 +119,47 @@ public class Creacion_bbdd {
             sentencia = conexion.createStatement();
             String sql = "INSERT INTO USUARIO("+
                     "NOMBRE, APELLIDO,RUT,SEXO,NOMBRE_USUARIO,CONTRASENA,ID_TIPO)"
-                    + " VALUES('BASTIAN','SANTIBANEZ','20.401.787-5','MASCULINO','SSAB','1234','1')";
+                    + " VALUES('"+nombre+"','"+apellido+"','"+rut+"','"+sexo+"','"+nm_usuario+"','"+contrasena+"','"+id_tip+"')";
             
             sentencia.executeUpdate(sql);
+            sentencia.close();
+            conexion.close();
+            ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
+            JOptionPane.showMessageDialog(null,"Datos ingresados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
+            
+        }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
+            JOptionPane.showMessageDialog(null, "Error: " + e, 
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
+        }
+        
+        
+    }// 
+    //-----------------------------------------------------------------------------------------------------------------//  
+        
+    public void mostrarUsuarios(JTable tblUsuario){
+         
+         try{
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(URL);
+            sentencia = conexion.createStatement();
+            String sql = "SELECT * FROM USUARIO";
+            resultados = sentencia.executeQuery(sql);
+            int fila = 0;
+            while(resultados.next()){
+                
+                tblUsuario.setValueAt(resultados.getInt("ID"), fila, 0);
+                tblUsuario.setValueAt(resultados.getString("NOMBRE"), fila, 1);
+                tblUsuario.setValueAt(resultados.getString("APELLIDO"), fila, 2);
+                tblUsuario.setValueAt(resultados.getString("RUT"), fila, 3);
+                tblUsuario.setValueAt(resultados.getString("SEXO"), fila, 4);
+                tblUsuario.setValueAt(resultados.getString("NOMBRE_USUARIO"), fila, 5);
+                tblUsuario.setValueAt(resultados.getString("CONTRASENA"), fila, 6);
+                tblUsuario.setValueAt(resultados.getString("ID_TIPO"), fila, 7);
+                fila++;
+            }
+            
+            resultados.close();
             sentencia.close();
             conexion.close();
             
@@ -127,33 +167,20 @@ public class Creacion_bbdd {
             JOptionPane.showMessageDialog(null, "Error: " + e, 
                     "Error!!", JOptionPane.ERROR_MESSAGE);
         }
-        System.out.println("datos ingresados!!"); 
-        
-    }// 
-        
-    //-----------------------------------------------------------------------------------------------------------------//  
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
       //----------------------------------------------------------------------------------------------------------------//  
-        public static void main(String[] args) {
-        Creacion_bbdd cb= new Creacion_bbdd();
-//      cb.CrearBD();
-//      cb.TablaTipoUsuario();
-//      cb.TablaUsuario();
-//      cb.IDTIPOUSUARIO();
-//        cb.IDUSUARIO();
+       
+      //----------------------------------------------------------------------------------------------------------------//
+      
+      //----------------------------------------------------------------------------------------------------------------//
+      
+      //----------------------------------------------------------------------------------------------------------------//
+//        public static void main(String[] args) {
+//        Creacion_bbdd cb= new Creacion_bbdd();
+////      cb.CrearBD();
+////      cb.TablaTipoUsuario();
+////      cb.TablaUsuario();
+////      cb.IDTIPOUSUARIO();
+////        cb.IDUSUARIO();
+//    }
     }
 }
