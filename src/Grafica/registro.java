@@ -92,14 +92,9 @@ public class registro extends javax.swing.JFrame {
         try{
         String usuario= campo_usuario.getText();
         String contrasena=campo_contrasena.getText();
-//        if(usuario.equals("admin")&& contrasena.equals("123")){
-//            dispose();
-//        }
         int key=0;
-//        this.dispose();
         ver.users(usuario, contrasena,key);
-//        revision rv = new revision();
-//        rv.setVisible(true);
+        this.dispose();
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,"Error: " + e);
         }

@@ -33,6 +33,9 @@ public class inicio_secion {
             key=1;
         revision rv = new revision();
         rv.setVisible(true);
+//        registro rr = new registro();
+//        rr.setVisible(true);
+        
             JOptionPane.showMessageDialog(null,"BIENVENIDO \n" + usuario,"Bienvenida",JOptionPane.DEFAULT_OPTION);
         }
         if (key==0) {
