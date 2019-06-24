@@ -83,7 +83,45 @@ public class modificarproducto extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
+        txtcate = new javax.swing.JTextField();
+        btn_el_cat = new javax.swing.JButton();
+        ver_cat = new javax.swing.JButton();
+        jLabel26 = new javax.swing.JLabel();
+        txtsecc = new javax.swing.JTextField();
+        ver_sec = new javax.swing.JButton();
+        btn_el_sec = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        tblseccion2 = new javax.swing.JTable();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        tblcategoria2 = new javax.swing.JTable();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
+        jLabel24 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        txtidsec = new javax.swing.JTextField();
+        txtpasec = new javax.swing.JTextField();
+        txtrasec = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        ver_idcata = new javax.swing.JButton();
+        jLabel37 = new javax.swing.JLabel();
+        ver_catid = new javax.swing.JButton();
+        txtidcat = new javax.swing.JTextField();
+        txtnmcat = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
+        limpiar = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel29 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -127,12 +165,28 @@ public class modificarproducto extends javax.swing.JFrame {
         tblseccion.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
                 {null, null, null}
             },
             new String [] {
                 "ID", "PASILLO ", "RACK"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(tblseccion);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, 220, 60));
@@ -140,12 +194,29 @@ public class modificarproducto extends javax.swing.JFrame {
         tblcategoria.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
                 {null, null}
             },
             new String [] {
                 "ID", "CATEGORIA_NOMBRE "
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane2.setViewportView(tblcategoria);
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, 220, 60));
@@ -217,7 +288,7 @@ public class modificarproducto extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bt.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 380));
 
-        jTabbedPane1.addTab("Modificar Productos", jPanel1);
+        jTabbedPane1.addTab("Modificar ", jPanel1);
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -228,31 +299,39 @@ public class modificarproducto extends javax.swing.JFrame {
 
         tblproductos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "CODIGO", "NOMBRE", "CANTIDAD", "PASILLO", "CATEGORIA_NOMBRE"
+                "ID", "CODIGO", "NOMBRE", "CANTIDAD", "PASILLO", "CATEGORIA_NOMBRE"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane3.setViewportView(tblproductos);
 
         jPanel2.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 560, 190));
@@ -276,7 +355,7 @@ public class modificarproducto extends javax.swing.JFrame {
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bt.jpg"))); // NOI18N
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 380));
 
-        jTabbedPane1.addTab("Ver productos", jPanel2);
+        jTabbedPane1.addTab("Ver ", jPanel2);
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -314,7 +393,7 @@ public class modificarproducto extends javax.swing.JFrame {
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("<html>Ingrese seccion nueva:</html>");
         jLabel20.setToolTipText("");
-        jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, 170, -1));
+        jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, 170, -1));
 
         btn_ingreso2.setText("Ingresar");
         btn_ingreso2.addActionListener(new java.awt.event.ActionListener() {
@@ -322,14 +401,14 @@ public class modificarproducto extends javax.swing.JFrame {
                 btn_ingreso2ActionPerformed(evt);
             }
         });
-        jPanel3.add(btn_ingreso2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, 90, -1));
-        jPanel3.add(campo_pasillo, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, 120, -1));
-        jPanel3.add(campo_rack, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 120, -1));
+        jPanel3.add(btn_ingreso2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 90, -1));
+        jPanel3.add(campo_pasillo, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, 120, -1));
+        jPanel3.add(campo_rack, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 120, -1));
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Rack:");
-        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, -1, -1));
+        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, -1, -1));
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
@@ -339,12 +418,242 @@ public class modificarproducto extends javax.swing.JFrame {
         jLabel23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("Pasillo:");
-        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 80, -1, -1));
+        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, -1, -1));
+
+        jButton3.setText("Salir");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, -1, -1));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bt.jpg"))); // NOI18N
         jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 380));
 
-        jTabbedPane1.addTab("Ingresar categoria o seccion", jPanel3);
+        jTabbedPane1.addTab("categoria o seccion", jPanel3);
+
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel25.setText("<html>Ingrese ID de seccion a eliminar:</html>");
+        jPanel4.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 150, -1));
+        jPanel4.add(txtcate, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 120, -1));
+
+        btn_el_cat.setText("Eliminar");
+        btn_el_cat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_el_catActionPerformed(evt);
+            }
+        });
+        jPanel4.add(btn_el_cat, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+
+        ver_cat.setText("Ver");
+        ver_cat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ver_catActionPerformed(evt);
+            }
+        });
+        jPanel4.add(ver_cat, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, -1, -1));
+
+        jLabel26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel26.setText("Seccion:");
+        jPanel4.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 80, -1));
+        jPanel4.add(txtsecc, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 110, -1));
+
+        ver_sec.setText("Ver");
+        ver_sec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ver_secActionPerformed(evt);
+            }
+        });
+        jPanel4.add(ver_sec, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, -1, -1));
+
+        btn_el_sec.setText("Eliminar");
+        btn_el_sec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_el_secActionPerformed(evt);
+            }
+        });
+        jPanel4.add(btn_el_sec, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
+
+        tblseccion2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "ID", "PASILLO", "RACK"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane4.setViewportView(tblseccion2);
+
+        jPanel4.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 260, 70));
+
+        tblcategoria2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "ID", "CATEGORIA_NOMBRE"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane5.setViewportView(tblcategoria2);
+
+        jPanel4.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 260, 70));
+
+        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel27.setText("<html>Ingrese ID de categoria a eliminar:</html>");
+        jPanel4.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 150, -1));
+
+        jLabel28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel28.setText("Categoria:");
+        jPanel4.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 60, 150, -1));
+
+        jButton5.setText("Salir");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, -1, -1));
+
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bt.jpg"))); // NOI18N
+        jPanel4.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 380));
+
+        jTabbedPane1.addTab("Eliminar categoria o seccion", jPanel4);
+
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel31.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel31.setText("Modificar seccion");
+        jPanel5.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+
+        jLabel32.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel32.setText("Pasillo:");
+        jPanel5.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel33.setText("<html>Ingrese ID a modificar:</html>");
+        jPanel5.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 110, -1));
+
+        jLabel34.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel34.setText("Modificar categoria");
+        jPanel5.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, -1, -1));
+
+        jLabel35.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel35.setText("Rack:");
+        jPanel5.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
+
+        jLabel36.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel36.setText("Nombre:");
+        jPanel5.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, -1, -1));
+        jPanel5.add(txtidsec, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 100, -1));
+        jPanel5.add(txtpasec, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 100, -1));
+        jPanel5.add(txtrasec, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 100, -1));
+
+        jButton1.setText("Modificar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
+
+        ver_idcata.setText("Ver");
+        ver_idcata.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ver_idcataActionPerformed(evt);
+            }
+        });
+        jPanel5.add(ver_idcata, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, -1, -1));
+
+        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel37.setText("<html>Ingrese ID a modificar:</html>");
+        jPanel5.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, 130, -1));
+
+        ver_catid.setText("Ver");
+        ver_catid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ver_catidActionPerformed(evt);
+            }
+        });
+        jPanel5.add(ver_catid, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 130, -1, -1));
+        jPanel5.add(txtidcat, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 120, -1));
+        jPanel5.add(txtnmcat, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 180, 120, -1));
+
+        jButton4.setText("Modificar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, -1, -1));
+
+        limpiar.setText("Limpiar");
+        limpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limpiarActionPerformed(evt);
+            }
+        });
+        jPanel5.add(limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, -1, -1));
+
+        jButton2.setText("Salir");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, -1, -1));
+
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bt.jpg"))); // NOI18N
+        jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 380));
+
+        jTabbedPane1.addTab("Modificar categoria o seccion", jPanel5);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -395,6 +704,10 @@ public class modificarproducto extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_vercatActionPerformed
 
     private void btn_modproActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_modproActionPerformed
+        if (txt_nombre.getText().equals("")||txt_cantidad.getText().equals("")||txt_idcat.getText().equals("")||
+                txt_idsec.getText().equals("")||txt_cod.getText().equals("")||txt_codigo.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+        }else{
        
         String nombre = txt_nombre.getText();
         int id =Integer.parseInt(txt_codigo.getText());
@@ -404,6 +717,13 @@ public class modificarproducto extends javax.swing.JFrame {
         int id_cat =Integer.parseInt(txt_idcat.getText());
         
         cb.IDMODIFICARPRODUCTO(id, nombre, codigo, cantidad, id_sec, id_cat);
+        txt_nombre.setText("");
+        txt_cantidad.setText("");
+        txt_idcat.setText("");
+        txt_idsec.setText("");
+        txt_cod.setText("");
+        txt_codigo.setText("");
+        }
     }//GEN-LAST:event_btn_modproActionPerformed
 
     private void btn_verproActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_verproActionPerformed
@@ -411,15 +731,120 @@ public class modificarproducto extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_verproActionPerformed
 
     private void btn_ingresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ingresoActionPerformed
+
+        if (campo_categoria.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+        }else{
         String cat = campo_categoria.getText();
-        cb.IDCategoria(cat);        
+        cb.IDCategoria(cat); 
+        }
     }//GEN-LAST:event_btn_ingresoActionPerformed
 
     private void btn_ingreso2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ingreso2ActionPerformed
+        
+        if (campo_pasillo.getText().equals("")||campo_rack.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+        }else{
         String pas = campo_pasillo.getText();
         String rack = campo_rack.getText();
         cb.IDSeccion(pas, rack);
+        }
     }//GEN-LAST:event_btn_ingreso2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void ver_catActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ver_catActionPerformed
+        cb.vercat2(tblcategoria2);
+    }//GEN-LAST:event_ver_catActionPerformed
+
+    private void ver_secActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ver_secActionPerformed
+        cb.versec2(tblseccion2);
+    }//GEN-LAST:event_ver_secActionPerformed
+
+    private void btn_el_catActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_el_catActionPerformed
+        if (txtcate.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+        }else{
+            int id = Integer.parseInt(txtcate.getText());
+        cb.delcat(id);
+        txtcate.setText("");
+        }
+    }//GEN-LAST:event_btn_el_catActionPerformed
+
+    private void btn_el_secActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_el_secActionPerformed
+        if (txtsecc.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+        }else{
+            int id = Integer.parseInt(txtsecc.getText());
+        cb.delsec(id);
+        txtsecc.setText("");
+        }
+    }//GEN-LAST:event_btn_el_secActionPerformed
+
+    private void ver_catidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ver_catidActionPerformed
+        
+        if (txtidcat.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+        }else{
+            int id = Integer.parseInt(txtidcat.getText());
+        cb.VERPORCAR(txtnmcat, id);
+        }
+    }//GEN-LAST:event_ver_catidActionPerformed
+
+    private void ver_idcataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ver_idcataActionPerformed
+                if (txtidsec.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+        }else{
+            int id = Integer.parseInt(txtidsec.getText());
+        cb.VERPORSEC(txtpasec, txtrasec, id);
+        }
+    }//GEN-LAST:event_ver_idcataActionPerformed
+
+    private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
+        txtnmcat.setText("");
+        txtidcat.setText("");
+        txtpasec.setText("");
+        txtrasec.setText("");
+        txtidsec.setText("");
+        
+    }//GEN-LAST:event_limpiarActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        if (txtpasec.getText().equals("")||txtrasec.getText().equals("")||txtidsec.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+        }else{
+            int id =Integer.parseInt(txtidsec.getText());
+            String pasillo=txtpasec.getText();
+            String rack=txtrasec.getText();
+        cb.MODIFICARSECCION(id, pasillo, rack);
+        txtpasec.setText("");
+        txtrasec.setText("");
+        txtidsec.setText("");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        if (txtidcat.getText().equals("")||txtnmcat.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+        }else{
+            int id =Integer.parseInt(txtidcat.getText());
+            String nombre=txtnmcat.getText();
+        cb.MODIFICARCATEGORIA(id, nombre);
+        txtnmcat.setText("");
+        txtidcat.setText("");
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -457,6 +882,8 @@ public class modificarproducto extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_el_cat;
+    private javax.swing.JButton btn_el_sec;
     private javax.swing.JButton btn_ingreso;
     private javax.swing.JButton btn_ingreso2;
     private javax.swing.JButton btn_limpiar;
@@ -469,6 +896,11 @@ public class modificarproducto extends javax.swing.JFrame {
     private javax.swing.JTextField campo_categoria;
     private javax.swing.JTextField campo_pasillo;
     private javax.swing.JTextField campo_rack;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -486,7 +918,20 @@ public class modificarproducto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -496,18 +941,36 @@ public class modificarproducto extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JButton limpiar;
     private javax.swing.JTable tblcategoria;
+    private javax.swing.JTable tblcategoria2;
     private javax.swing.JTable tblproductos;
     private javax.swing.JTable tblseccion;
+    private javax.swing.JTable tblseccion2;
     private javax.swing.JTextField txt_cantidad;
     private javax.swing.JTextField txt_cod;
     private javax.swing.JTextField txt_codigo;
     private javax.swing.JTextField txt_idcat;
     private javax.swing.JTextField txt_idsec;
     private javax.swing.JTextField txt_nombre;
+    private javax.swing.JTextField txtcate;
+    private javax.swing.JTextField txtidcat;
+    private javax.swing.JTextField txtidsec;
+    private javax.swing.JTextField txtnmcat;
+    private javax.swing.JTextField txtpasec;
+    private javax.swing.JTextField txtrasec;
+    private javax.swing.JTextField txtsecc;
+    private javax.swing.JButton ver_cat;
+    private javax.swing.JButton ver_catid;
+    private javax.swing.JButton ver_idcata;
+    private javax.swing.JButton ver_sec;
     // End of variables declaration//GEN-END:variables
 }

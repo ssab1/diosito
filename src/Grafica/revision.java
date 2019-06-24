@@ -80,6 +80,7 @@ public class revision extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblrut = new javax.swing.JTable();
+        jButton6 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
@@ -92,26 +93,25 @@ public class revision extends javax.swing.JFrame {
         campo_cantpro = new javax.swing.JTextField();
         btn_ingpro = new javax.swing.JButton();
         jLabel26 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
         btn_modificarproduc = new javax.swing.JButton();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         rb_bf = new javax.swing.JRadioButton();
         rb_ba = new javax.swing.JRadioButton();
         rb_pasb = new javax.swing.JRadioButton();
         rb_pasa = new javax.swing.JRadioButton();
+        jButton2 = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        txt_codigo2 = new javax.swing.JTextField();
+        txt_cantidad2 = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jLabel28 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
+        txt_codigo1 = new javax.swing.JTextField();
+        txt_cantidad1 = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
         campo_revisarcodigo = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -122,7 +122,7 @@ public class revision extends javax.swing.JFrame {
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        jButton8 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -251,6 +251,14 @@ public class revision extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 130, 260, 50));
 
+        jButton6.setText("Salir");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 400, -1, -1));
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bodeeee.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 470));
@@ -300,9 +308,6 @@ public class revision extends javax.swing.JFrame {
         jLabel26.setText("Ingreso producto nuevo:");
         jPanel2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
 
-        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cajas.png"))); // NOI18N
-        jPanel2.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, -1, -1));
-
         btn_modificarproduc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificare.png"))); // NOI18N
         btn_modificarproduc.setContentAreaFilled(false);
         btn_modificarproduc.addActionListener(new java.awt.event.ActionListener() {
@@ -310,18 +315,13 @@ public class revision extends javax.swing.JFrame {
                 btn_modificarproducActionPerformed(evt);
             }
         });
-        jPanel2.add(btn_modificarproduc, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, -1));
+        jPanel2.add(btn_modificarproduc, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 340, -1, -1));
 
         jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cajas.png"))); // NOI18N
         jPanel2.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, -1, -1));
 
         jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cajas.png"))); // NOI18N
         jPanel2.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, -1, -1));
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Modificar producto");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, -1, -1));
 
         rb_bf.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rb_bf.setForeground(new java.awt.Color(255, 255, 255));
@@ -347,6 +347,14 @@ public class revision extends javax.swing.JFrame {
         rb_pasa.setContentAreaFilled(false);
         jPanel2.add(rb_pasa, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, -1));
 
+        jButton2.setText("Salir");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, -1, -1));
+
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bodeeee.jpg"))); // NOI18N
         jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
 
@@ -358,8 +366,8 @@ public class revision extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Cantidad:");
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
-        jPanel3.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 110, -1));
-        jPanel3.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 110, -1));
+        jPanel3.add(txt_codigo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 110, -1));
+        jPanel3.add(txt_cantidad2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 110, -1));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
@@ -367,6 +375,11 @@ public class revision extends javax.swing.JFrame {
         jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
 
         jButton4.setText("Ingresar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
 
         jLabel28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -378,11 +391,16 @@ public class revision extends javax.swing.JFrame {
         jLabel29.setForeground(new java.awt.Color(255, 255, 255));
         jLabel29.setText("Ver datos del codigo:");
         jPanel3.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 100, -1, -1));
-        jPanel3.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 120, -1));
-        jPanel3.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 120, -1));
+        jPanel3.add(txt_codigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, 120, -1));
+        jPanel3.add(txt_cantidad1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 120, -1));
 
         jButton5.setText("Retiro");
-        jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, -1, -1));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, -1, -1));
         jPanel3.add(campo_revisarcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 130, 140, -1));
 
         tblrevisar.setModel(new javax.swing.table.DefaultTableModel(
@@ -432,7 +450,7 @@ public class revision extends javax.swing.JFrame {
                 btn_vertodosActionPerformed(evt);
             }
         });
-        jPanel3.add(btn_vertodos, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 420, -1, -1));
+        jPanel3.add(btn_vertodos, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 420, -1, -1));
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/camion.png"))); // NOI18N
         jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 130, 130));
@@ -440,20 +458,25 @@ public class revision extends javax.swing.JFrame {
         jLabel43.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel43.setForeground(new java.awt.Color(255, 255, 255));
         jLabel43.setText("Salida productos:");
-        jPanel3.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, -1, -1));
+        jPanel3.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, -1, -1));
 
         jLabel44.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel44.setForeground(new java.awt.Color(255, 255, 255));
         jLabel44.setText("Codigo:");
-        jPanel3.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, -1, -1));
+        jPanel3.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, -1, -1));
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Cantidad:");
-        jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, -1, -1));
+        jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, -1, -1));
 
-        jButton8.setText("Aceptar");
-        jPanel3.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 260, -1, -1));
+        jButton7.setText("Salir");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 420, -1, -1));
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bodeeee.jpg"))); // NOI18N
         jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 480));
@@ -544,10 +567,16 @@ public class revision extends javax.swing.JFrame {
             a=1;
             c=1;
             cb.IDProducto(codigo, nombre, cantidad, a, c);
+            campo_codigo.setText("");
+            campo_nompro.setText("");
+            campo_cantpro.setText("");
         }else if (rb_ba.isSelected()&&rb_pasa.isSelected()){
             a=2;
             c=2;
             cb.IDProducto(codigo, nombre, cantidad, a, c);
+            campo_codigo.setText("");
+            campo_nompro.setText("");
+            campo_cantpro.setText("");
         }
         }
     }//GEN-LAST:event_btn_ingproActionPerformed
@@ -559,6 +588,7 @@ public class revision extends javax.swing.JFrame {
         int cod=Integer.parseInt(campo_revisarcodigo.getText());
 //        String cod = campo_revisarcodigo.getText();
         cb.verporcod(tblrevisar, cod);
+        campo_revisarcodigo.setText("");
         }
     }//GEN-LAST:event_btn_codverActionPerformed
 
@@ -582,6 +612,44 @@ public class revision extends javax.swing.JFrame {
         
         mp.setVisible(true);        
     }//GEN-LAST:event_btn_modificarproducActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        
+        if (txt_cantidad1.getText().equals("")||txt_codigo1.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+        }else{
+        int codigo = Integer.parseInt(txt_codigo1.getText());
+        int cantidad = Integer.parseInt(txt_cantidad1.getText());
+        cb.SALIDAPRODUCTO(codigo, cantidad);
+        txt_cantidad1.setText("");
+        txt_codigo1.setText("");
+                }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        if (txt_cantidad2.getText().equals("")||txt_codigo2.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+        }else{
+        
+        int codigo = Integer.parseInt(txt_codigo2.getText());
+        int cantidad = Integer.parseInt(txt_cantidad2.getText());
+        cb.ENTRADAPRODUCTO(codigo, cantidad);
+        txt_cantidad1.setText("");
+        txt_codigo1.setText("");
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -636,12 +704,13 @@ public class revision extends javax.swing.JFrame {
     private javax.swing.JButton dl_user;
     private javax.swing.JTextField dl_userr;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -660,7 +729,6 @@ public class revision extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel41;
@@ -678,10 +746,6 @@ public class revision extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JRadioButton rb_ba;
     private javax.swing.JRadioButton rb_bf;
     private javax.swing.JRadioButton rb_femenino;
@@ -691,5 +755,9 @@ public class revision extends javax.swing.JFrame {
     private javax.swing.JRadioButton rb_pasb;
     private javax.swing.JTable tblrevisar;
     private javax.swing.JTable tblrut;
+    private javax.swing.JTextField txt_cantidad1;
+    private javax.swing.JTextField txt_cantidad2;
+    private javax.swing.JTextField txt_codigo1;
+    private javax.swing.JTextField txt_codigo2;
     // End of variables declaration//GEN-END:variables
 }

@@ -171,39 +171,7 @@ public class Creacion_bbdd {
     }// 
     
     //-----------------------------------------------------------------------------------------------------------------//
-    
-    //----------------------------------------------------------------------------------------------------------------//
-    
-    
-    
-    
-    
-    //aqui voy
-        public void MDUSUARIO(String md,JTextField md_nombre){
-       
-        try{
-            Class.forName(DRIVER);
-            conexion = DriverManager.getConnection(URL);
-            
-            sentencia = conexion.createStatement();
-            String sql = "SELECT NOMBRE, APELLIDO,RUT,SEXO,NOMBRE_USUARIO,CONTRASENA FROM USUARIO WHERE ID='"+md+"' ";
-            md_nombre.setText("NOMBRE");
-            sentencia.executeUpdate(sql);
-            sentencia.close();
-            conexion.close();
-            ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
-            JOptionPane.showMessageDialog(null,"Usuario eliminado!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
-            
-        }catch(ClassNotFoundException | SQLException e){
-            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
-            JOptionPane.showMessageDialog(null, "Error: " + e, 
-                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
-        }
-        
-        
-    }// 
-     
-    
+
     //-----------------------------------------------------------------------------------------------------------------//  
         
     public void mostrarUsuarios(JTable tblUsuario){
@@ -212,17 +180,17 @@ public class Creacion_bbdd {
             Class.forName(DRIVER);
             conexion = DriverManager.getConnection(URL);
             sentencia = conexion.createStatement();
-            String sql = "SELECT NOMBRE,APELLIDO,RUT,SEXO,NOMBRE_USUARIO,TIPO_USER FROM USUARIO JOIN TIPO_USUARIO ON TIPO_USUARIO.ID=USUARIO.ID_TIPO ";
+            String sql = "SELECT USUARIO.ID,NOMBRE,APELLIDO,RUT,SEXO,NOMBRE_USUARIO,TIPO_USER FROM USUARIO JOIN TIPO_USUARIO ON TIPO_USUARIO.ID=USUARIO.ID_TIPO ";
             resultados = sentencia.executeQuery(sql);
             int fila = 0;
             while(resultados.next()){
-                
-                tblUsuario.setValueAt(resultados.getString("NOMBRE"), fila, 0);
-                tblUsuario.setValueAt(resultados.getString("APELLIDO"), fila, 1);
-                tblUsuario.setValueAt(resultados.getString("RUT"), fila, 2);
-                tblUsuario.setValueAt(resultados.getString("SEXO"), fila, 3);
-                tblUsuario.setValueAt(resultados.getString("NOMBRE_USUARIO"), fila, 4);
-                tblUsuario.setValueAt(resultados.getString("TIPO_USER"), fila, 5);
+                tblUsuario.setValueAt(resultados.getString("ID"), fila, 0);
+                tblUsuario.setValueAt(resultados.getString("NOMBRE"), fila, 1);
+                tblUsuario.setValueAt(resultados.getString("APELLIDO"), fila, 2);
+                tblUsuario.setValueAt(resultados.getString("RUT"), fila, 3);
+                tblUsuario.setValueAt(resultados.getString("SEXO"), fila, 4);
+                tblUsuario.setValueAt(resultados.getString("NOMBRE_USUARIO"), fila, 5);
+                tblUsuario.setValueAt(resultados.getString("TIPO_USER"), fila, 6);
                 fila++;
             }
             
@@ -331,90 +299,7 @@ public class Creacion_bbdd {
         
     }// 
     
-    //revisar
-//    public void MODIFICARUSUARIO(int id,String nombre,String apellido,String rut,String sexo,String nom_user,
-//            String contra){
-//         
-//         try{
-//            Class.forName(DRIVER);
-//            conexion = DriverManager.getConnection(URL);
-//            sentencia = conexion.createStatement();
-//            String sql = "UPDATE USUARIO SET NOMBRE='"+nombre+"',APELLIDO='"+apellido+"',RUT='"+rut+"',"
-//                    + "SEXO='"+sexo+"',NOMBRE_USUARIO='"+nom_user+"',CONTRASENA='"+contra+"' WHERE ID='"+id+"'";
-//            resultados = sentencia.executeQuery(sql);
-//            int fila = 0;
-//            while(resultados.next()){
-////                
-////                tbl_moduser.setValueAt(resultados.getString("NOMBRE"), fila, 0);
-////                tbl_moduser.setValueAt(resultados.getString("APELLIDO"), fila, 1);
-////                tbl_moduser.setValueAt(resultados.getString("RUT"), fila, 2);
-////                tbl_moduser.setValueAt(resultados.getString("SEXO"), fila, 3);
-////                tbl_moduser.setValueAt(resultados.getString("NOMBRE_USUARIO"), fila, 4);
-////                tbl_moduser.setValueAt(resultados.getString("CONTRASENA"), fila, 5);
-//                fila++;
-//            }
-//            
-//            resultados.close();
-//            sentencia.close();
-//            conexion.close();
-//            
-//        }catch(ClassNotFoundException | SQLException e){
-//            JOptionPane.showMessageDialog(null, "Error: " + e, 
-//                    "Error!!", JOptionPane.ERROR_MESSAGE);
-//        }
-//    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     //------------------------creacion productos-----------------------------------------//
     
     
@@ -617,6 +502,32 @@ public class Creacion_bbdd {
                     "Error!!", JOptionPane.ERROR_MESSAGE);
         }
     }
+    public void versec2(JTable tblseccion2){
+         
+         try{
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(URL);
+            sentencia = conexion.createStatement();
+            String sql = "SELECT * FROM SECCION";
+            resultados = sentencia.executeQuery(sql);
+            int fila = 0;
+            while(resultados.next()){
+                
+                tblseccion2.setValueAt(resultados.getString("ID"), fila, 0);
+                tblseccion2.setValueAt(resultados.getString("PASILLO"), fila, 1);
+                tblseccion2.setValueAt(resultados.getString("RACK"), fila, 2);
+                fila++;
+            }
+            
+            resultados.close();
+            sentencia.close();
+            conexion.close();
+            
+        }catch(ClassNotFoundException | SQLException e){
+            JOptionPane.showMessageDialog(null, "Error: " + e, 
+                    "Error!!", JOptionPane.ERROR_MESSAGE);
+        }
+    }
             //--------------------------------------------------------------------------------------------------------------------------//
         public void vercat(JTable tblcategoria){
          
@@ -631,6 +542,31 @@ public class Creacion_bbdd {
                 
                 tblcategoria.setValueAt(resultados.getString("ID"), fila, 0);
                 tblcategoria.setValueAt(resultados.getString("CATEGORIA_NOMBRE"), fila, 1);
+                fila++;
+            }
+            
+            resultados.close();
+            sentencia.close();
+            conexion.close();
+            
+        }catch(ClassNotFoundException | SQLException e){
+            JOptionPane.showMessageDialog(null, "Error: " + e, 
+                    "Error!!", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+   public void vercat2(JTable tblcategoria2){
+         
+         try{
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(URL);
+            sentencia = conexion.createStatement();
+            String sql = "SELECT * FROM CATEGORIA";
+            resultados = sentencia.executeQuery(sql);
+            int fila = 0;
+            while(resultados.next()){
+                
+                tblcategoria2.setValueAt(resultados.getString("ID"), fila, 0);
+                tblcategoria2.setValueAt(resultados.getString("CATEGORIA_NOMBRE"), fila, 1);
                 fila++;
             }
             
@@ -727,18 +663,18 @@ public class Creacion_bbdd {
             Class.forName(DRIVER);
             conexion = DriverManager.getConnection(URL);
             sentencia = conexion.createStatement();
-            String sql = "SELECT CODIGO,NOMBRE,CANTIDAD,PASILLO,CATEGORIA_NOMBRE "
+            String sql = "SELECT PRODUCTO.ID,CODIGO,NOMBRE,CANTIDAD,PASILLO,CATEGORIA_NOMBRE "
                     + "FROM PRODUCTO JOIN CATEGORIA ON PRODUCTO.ID_CAT=CATEGORIA.ID"
                     + " INNER JOIN SECCION ON PRODUCTO.ID_SEC=SECCION.ID ";
             resultados = sentencia.executeQuery(sql);
             int fila = 0;
             while(resultados.next()){
-                
-                tblproductos.setValueAt(resultados.getString("CODIGO"), fila, 0);
-                tblproductos.setValueAt(resultados.getString("NOMBRE"), fila, 1);
-                tblproductos.setValueAt(resultados.getString("CANTIDAD"), fila, 2);
-                tblproductos.setValueAt(resultados.getString("PASILLO"), fila, 3);
-                tblproductos.setValueAt(resultados.getString("CATEGORIA_NOMBRE"), fila, 4);
+                tblproductos.setValueAt(resultados.getString("ID"), fila, 0);
+                tblproductos.setValueAt(resultados.getString("CODIGO"), fila, 1);
+                tblproductos.setValueAt(resultados.getString("NOMBRE"), fila, 2);
+                tblproductos.setValueAt(resultados.getString("CANTIDAD"), fila, 3);
+                tblproductos.setValueAt(resultados.getString("PASILLO"), fila, 4);
+                tblproductos.setValueAt(resultados.getString("CATEGORIA_NOMBRE"), fila, 5);
                 fila++;
             }
             
@@ -751,19 +687,210 @@ public class Creacion_bbdd {
                     "Error!!", JOptionPane.ERROR_MESSAGE);
         }
     }
-     //---------------------------------------------------------------------------------------------------------------------//
-        public static void main(String[] args) {
-        Creacion_bbdd cb= new Creacion_bbdd();
-//        cb.IDSeccionn();
-//        cb.IDCategoriaa();
-//        cb.TablaCategoria();
-//        cb.TablaSeccion();
-        cb.TablaProducto();
-//        cb.verUSUARIO();
-////      cb.CrearBD();
-////      cb.TablaTipoUsuario();
-////      cb.TablaUsuario();
-////      cb.IDTIPOUSUARIO();
-////        cb.IDUSUARIO();
+        
+    public void SALIDAPRODUCTO(int codigo, int cantidad){
+       
+        try{
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(URL);
+            
+            sentencia = conexion.createStatement();
+            String sql = "UPDATE PRODUCTO SET "+
+                    "CANTIDAD=CANTIDAD-'"+cantidad+"' WHERE CODIGO='"+codigo+"'";
+            
+            sentencia.executeUpdate(sql);
+            sentencia.close();
+            conexion.close();
+            ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
+            JOptionPane.showMessageDialog(null,"Datos ingresados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
+            
+        }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
+            JOptionPane.showMessageDialog(null, "Error: " + e, 
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
+        }
+        
+        
+    }// 
+    
+        public void ENTRADAPRODUCTO(int codigo, int cantidad){
+       
+        try{
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(URL);
+            
+            sentencia = conexion.createStatement();
+            String sql = "UPDATE PRODUCTO SET "+
+                    "CANTIDAD=CANTIDAD+'"+cantidad+"' WHERE CODIGO='"+codigo+"'";
+            
+            sentencia.executeUpdate(sql);
+            sentencia.close();
+            conexion.close();
+            ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
+            JOptionPane.showMessageDialog(null,"Datos ingresados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
+            
+        }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
+            JOptionPane.showMessageDialog(null, "Error: " + e, 
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
+        }
+        
+        
+    }// 
+        
+    public void delsec(int id){
+       
+        try{
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(URL);
+            
+            sentencia = conexion.createStatement();
+            String sql = "DELETE FROM SECCION WHERE ID='"+id+"'";
+            
+            sentencia.executeUpdate(sql);
+            sentencia.close();
+            conexion.close();
+            ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
+            JOptionPane.showMessageDialog(null,"Datos ingresados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
+            
+        }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
+            JOptionPane.showMessageDialog(null, "Error: " + e, 
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
+        }
+        
+        
+    }// 
+    public void delcat(int id){
+       
+        try{
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(URL);
+            
+            sentencia = conexion.createStatement();
+            String sql = "DELETE FROM CATEGORIA WHERE ID='"+id+"'";
+            
+            sentencia.executeUpdate(sql);
+            sentencia.close();
+            conexion.close();
+            ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
+            JOptionPane.showMessageDialog(null,"Datos ingresados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
+            
+        }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
+            JOptionPane.showMessageDialog(null, "Error: " + e, 
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
+        }
+        
+        
+    }// 
+    public void VERPORSEC(JTextField txtpasec,JTextField txtrasec,int id){
+         
+         try{
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(URL);
+            sentencia = conexion.createStatement();
+            String sql = "SELECT PASILLO,RACK FROM SECCION WHERE ID='"+id+"'";
+            
+            resultados = sentencia.executeQuery(sql);
+            txtpasec.setText(resultados.getString("PASILLO"));
+            txtrasec.setText(resultados.getString("RACK"));
+
+            
+            resultados.close();
+            sentencia.close();
+            conexion.close();
+            
+        }catch(ClassNotFoundException | SQLException e){
+            JOptionPane.showMessageDialog(null, "Error: " + e, 
+                    "Error!!", JOptionPane.ERROR_MESSAGE);
+        }
     }
+    
+    public void VERPORCAR(JTextField txtnmcat,int id){
+         
+         try{
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(URL);
+            sentencia = conexion.createStatement();
+            String sql = "SELECT CATEGORIA_NOMBRE FROM CATEGORIA WHERE ID='"+id+"'";
+            
+            resultados = sentencia.executeQuery(sql);
+            txtnmcat.setText(resultados.getString("CATEGORIA_NOMBRE"));
+
+            
+            resultados.close();
+            sentencia.close();
+            conexion.close();
+            
+        }catch(ClassNotFoundException | SQLException e){
+            JOptionPane.showMessageDialog(null, "Error: " + e, 
+                    "Error!!", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
+    public void MODIFICARCATEGORIA(int id,String nombre){
+       
+        try{
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(URL);
+            
+            sentencia = conexion.createStatement();
+            String sql = "UPDATE CATEGORIA SET "+
+                    "CATEGORIA_NOMBRE='"+nombre+"' WHERE ID='"+id+"'";
+            
+            sentencia.executeUpdate(sql);
+            sentencia.close();
+            conexion.close();
+            ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
+            JOptionPane.showMessageDialog(null,"Datos modificados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
+            
+        }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
+            JOptionPane.showMessageDialog(null, "Error: " + e, 
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
+        }
+        
+        
+    }// 
+        public void MODIFICARSECCION(int id,String pasillo,String rack){
+       
+        try{
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(URL);
+            
+            sentencia = conexion.createStatement();
+            String sql = "UPDATE SECCION SET "+
+                    "PASILLO='"+pasillo+"',RACK='"+rack+"' WHERE ID='"+id+"'";
+            
+            sentencia.executeUpdate(sql);
+            sentencia.close();
+            conexion.close();
+            ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
+            JOptionPane.showMessageDialog(null,"Datos modificados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
+            
+        }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
+            JOptionPane.showMessageDialog(null, "Error: " + e, 
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
+        }
+        
+        
+    }// 
+    
+     //---------------------------------------------------------------------------------------------------------------------//
+//        public static void main(String[] args) {
+//        Creacion_bbdd cb= new Creacion_bbdd();
+////        cb.IDSeccionn();
+////        cb.IDCategoriaa();
+////        cb.TablaCategoria();
+////        cb.TablaSeccion();
+//        cb.TablaProducto();
+////        cb.verUSUARIO();
+//////      cb.CrearBD();
+//////      cb.TablaTipoUsuario();
+//////      cb.TablaUsuario();
+//////      cb.IDTIPOUSUARIO();
+//////        cb.IDUSUARIO();
+//    }
 }
