@@ -134,6 +134,13 @@ public class modificarproducto extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel41 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        txt_delprop = new javax.swing.JTextField();
+        jButton7 = new javax.swing.JButton();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -682,6 +689,37 @@ public class modificarproducto extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Modificar categoria o seccion", jPanel5);
 
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel43.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel43.setText("Ingrese codigo a eliminar:");
+        jPanel6.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
+
+        jLabel45.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel45.setText("Eliminar producto");
+        jPanel6.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+        jPanel6.add(txt_delprop, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 110, -1));
+
+        jButton7.setText("Eliminar");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
+
+        jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cajas.png"))); // NOI18N
+        jLabel44.setText("jLabel44");
+        jPanel6.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, 270, 250));
+
+        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bt.jpg"))); // NOI18N
+        jLabel42.setText("jLabel42");
+        jPanel6.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 380));
+
+        jTabbedPane1.addTab("DEL_Producto", jPanel6);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -886,6 +924,17 @@ public class modificarproducto extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+               if (txt_delprop.getText().equals("")) {
+            ImageIcon vacio = new ImageIcon (modificarproducto.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
+        }else{
+        int codigo =Integer.parseInt(txt_delprop.getText());
+       cb.delpro(codigo);
+       txt_delprop.setText("");
+               }
+    }//GEN-LAST:event_jButton7ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -942,6 +991,7 @@ public class modificarproducto extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -978,6 +1028,10 @@ public class modificarproducto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -988,6 +1042,7 @@ public class modificarproducto extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -1003,6 +1058,7 @@ public class modificarproducto extends javax.swing.JFrame {
     private javax.swing.JTextField txt_cantidad;
     private javax.swing.JTextField txt_cod;
     private javax.swing.JTextField txt_codigo;
+    private javax.swing.JTextField txt_delprop;
     private javax.swing.JTextField txt_idcat;
     private javax.swing.JTextField txt_idsec;
     private javax.swing.JTextField txt_nombre;

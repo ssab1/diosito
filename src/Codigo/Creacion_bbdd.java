@@ -876,7 +876,29 @@ public class Creacion_bbdd {
         
         
     }// 
-    
+    public void delpro(int codigo){
+       
+        try{
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(URL);
+            
+            sentencia = conexion.createStatement();
+            String sql = "DELETE FROM PRODUCTO WHERE CODIGO='"+codigo+"'";
+            
+            sentencia.executeUpdate(sql);
+            sentencia.close();
+            conexion.close();
+            ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
+            JOptionPane.showMessageDialog(null,"Datos eliminados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
+            
+        }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
+            JOptionPane.showMessageDialog(null, "Error: " + e, 
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
+        }
+        
+        
+    }// 
      //---------------------------------------------------------------------------------------------------------------------//
 //        public static void main(String[] args) {
 //        Creacion_bbdd cb= new Creacion_bbdd();

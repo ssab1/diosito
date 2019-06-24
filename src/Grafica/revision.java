@@ -70,7 +70,6 @@ public class revision extends javax.swing.JFrame {
         campo_nompro = new javax.swing.JTextField();
         campo_cantpro = new javax.swing.JTextField();
         btn_ingpro = new javax.swing.JButton();
-        jLabel26 = new javax.swing.JLabel();
         btn_modificarproduc = new javax.swing.JButton();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
@@ -81,6 +80,7 @@ public class revision extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel32 = new javax.swing.JLabel();
         cb_desbloquear = new javax.swing.JCheckBox();
+        jLabel33 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -177,11 +177,6 @@ public class revision extends javax.swing.JFrame {
         });
         jPanel2.add(btn_ingpro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
 
-        jLabel26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel26.setText("Ingreso producto nuevo:");
-        jPanel2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
-
         btn_modificarproduc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificare.png"))); // NOI18N
         btn_modificarproduc.setContentAreaFilled(false);
         btn_modificarproduc.addActionListener(new java.awt.event.ActionListener() {
@@ -242,6 +237,11 @@ public class revision extends javax.swing.JFrame {
             }
         });
         jPanel2.add(cb_desbloquear, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, 40, 50));
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel33.setText("Ingreso producto nuevo:");
+        jPanel2.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bodeeee.jpg"))); // NOI18N
         jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
@@ -772,7 +772,6 @@ public class revision extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
@@ -780,6 +779,7 @@ public class revision extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel41;
