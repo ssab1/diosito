@@ -6,6 +6,8 @@
 package Grafica;
 
 import Codigo.Creacion_bbdd;
+import javax.swing.ButtonGroup;
+import javax.swing.JOptionPane;
 
 
 
@@ -21,9 +23,17 @@ public class nuevamod extends javax.swing.JFrame {
     Creacion_bbdd cb;
     public nuevamod() {
         initComponents();
+        configurarRB();
         cb = new Creacion_bbdd();
     }
-
+    public void configurarRB(){
+        ButtonGroup botones = new ButtonGroup();
+        
+        botones.add(rb_mas);
+        botones.add(rb_fe);
+        botones.add(rb_ot);
+        rb_ot.setSelected(true);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -48,16 +58,24 @@ public class nuevamod extends javax.swing.JFrame {
         campo_rut = new javax.swing.JTextField();
         campo_nmusuario = new javax.swing.JTextField();
         campo_contrasena = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        rb_mas = new javax.swing.JRadioButton();
+        rb_fe = new javax.swing.JRadioButton();
+        rb_ot = new javax.swing.JRadioButton();
         btn_modificar = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         campo_id = new javax.swing.JTextField();
         ver_id = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_moduser = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblUsuario = new javax.swing.JTable();
+        jLabel11 = new javax.swing.JLabel();
+        btn_salir = new javax.swing.JButton();
+        btn_mostar = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -103,23 +121,23 @@ public class nuevamod extends javax.swing.JFrame {
         jPanel1.add(campo_nmusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 90, -1));
         jPanel1.add(campo_contrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 90, -1));
 
-        jRadioButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setText("Masculino");
-        jRadioButton1.setContentAreaFilled(false);
-        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+        rb_mas.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        rb_mas.setForeground(new java.awt.Color(255, 255, 255));
+        rb_mas.setText("Masculino");
+        rb_mas.setContentAreaFilled(false);
+        jPanel1.add(rb_mas, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
 
-        jRadioButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setText("Femenino");
-        jRadioButton2.setContentAreaFilled(false);
-        jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, -1, -1));
+        rb_fe.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        rb_fe.setForeground(new java.awt.Color(255, 255, 255));
+        rb_fe.setText("Femenino");
+        rb_fe.setContentAreaFilled(false);
+        jPanel1.add(rb_fe, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, -1, -1));
 
-        jRadioButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton3.setText("Otro");
-        jRadioButton3.setContentAreaFilled(false);
-        jPanel1.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, -1, -1));
+        rb_ot.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        rb_ot.setForeground(new java.awt.Color(255, 255, 255));
+        rb_ot.setText("Otro");
+        rb_ot.setContentAreaFilled(false);
+        jPanel1.add(rb_ot, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, -1, -1));
 
         btn_modificar.setText("Modificar");
         btn_modificar.addActionListener(new java.awt.event.ActionListener() {
@@ -155,10 +173,77 @@ public class nuevamod extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, 410, 50));
 
+        jButton1.setText("Salir");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 340, -1, -1));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bt.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 390));
 
         jTabbedPane1.addTab("Modificar ususario", jPanel1);
+
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblUsuario.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "NOMBRE", "APELLIDO", "RUT", "SEXO", "NOMBRE_USUARIO", "TIPO_USER"
+            }
+        ));
+        jScrollPane2.setViewportView(tblUsuario);
+
+        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 640, 200));
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Usuarios en sistema");
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
+
+        btn_salir.setText("Salir");
+        btn_salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_salirActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btn_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 340, -1, -1));
+
+        btn_mostar.setText("Mostrar usuarios");
+        btn_mostar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_mostarActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btn_mostar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, -1, -1));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bt.jpg"))); // NOI18N
+        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 390));
+
+        jTabbedPane1.addTab("Ver usuarios", jPanel3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -176,13 +261,72 @@ public class nuevamod extends javax.swing.JFrame {
 
     private void btn_modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_modificarActionPerformed
 
+                if (campo_contrasena.getText().equals("") || campo_nombre.getText().equals("") ||campo_apellido.getText().equals("") ||
+            campo_rut.getText().equals("") || campo_nmusuario.getText().equals("") ) {
+            
+            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+        }else{
+            int id = Integer.parseInt(campo_id.getText());
+            String contrasena = campo_contrasena.getText();
+            String nombre = campo_nombre.getText();
+            String apellido = campo_apellido.getText();
+            String rut = campo_rut.getText();
+           
+            String nm_usuario = campo_nmusuario.getText();
+            
+            String m,f;
+            if (rb_mas.isSelected()) {
+                m="Masculino";
+                cb.IDMODIFICAR(id, nombre, apellido, rut, m, nm_usuario, contrasena);
+                campo_contrasena.setText("");
+                campo_nombre.setText("");
+                campo_apellido.setText("");
+                campo_rut.setText("");
+                campo_nmusuario.setText("");
+            }else if(rb_fe.isSelected()){
+                m="Femenino";
+                cb.IDMODIFICAR(id, nombre, apellido, rut, m, nm_usuario, contrasena);
+                campo_contrasena.setText("");
+                campo_nombre.setText("");
+                campo_apellido.setText("");
+                campo_rut.setText("");
+                campo_nmusuario.setText("");
+            }else{
+                m="Otro";
+                cb.IDMODIFICAR(id, nombre, apellido, rut, m, nm_usuario, contrasena);
+                campo_contrasena.setText("");
+                campo_nombre.setText("");
+                campo_apellido.setText("");
+                campo_rut.setText("");
+                campo_nmusuario.setText("");
+            }
+            
+        }
+        
+        
     }//GEN-LAST:event_btn_modificarActionPerformed
 
     private void ver_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ver_idActionPerformed
+        if (campo_id.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+        }else{
         
         int id= Integer.parseInt(campo_id.getText());
         cb.MODUSERR(id, tbl_moduser, campo_nmusuario, campo_nombre, campo_apellido, campo_contrasena, campo_rut);
+        }
     }//GEN-LAST:event_ver_idActionPerformed
+
+    private void btn_mostarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_mostarActionPerformed
+        cb.mostrarUsuarios(tblUsuario);
+    }//GEN-LAST:event_btn_mostarActionPerformed
+
+    private void btn_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salirActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btn_salirActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -221,13 +365,18 @@ public class nuevamod extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_modificar;
+    private javax.swing.JButton btn_mostar;
+    private javax.swing.JButton btn_salir;
     private javax.swing.JTextField campo_apellido;
     private javax.swing.JTextField campo_contrasena;
     private javax.swing.JTextField campo_id;
     private javax.swing.JTextField campo_nmusuario;
     private javax.swing.JTextField campo_nombre;
     private javax.swing.JTextField campo_rut;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -237,11 +386,14 @@ public class nuevamod extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JRadioButton rb_fe;
+    private javax.swing.JRadioButton rb_mas;
+    private javax.swing.JRadioButton rb_ot;
+    private javax.swing.JTable tblUsuario;
     private javax.swing.JTable tbl_moduser;
     private javax.swing.JButton ver_id;
     // End of variables declaration//GEN-END:variables

@@ -71,31 +71,15 @@ public class revision extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel33 = new javax.swing.JLabel();
         dl_userr = new javax.swing.JTextField();
         dl_user = new javax.swing.JButton();
         jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        md_nombre = new javax.swing.JTextField();
-        md_apellido = new javax.swing.JTextField();
-        md_rut = new javax.swing.JTextField();
-        md_sexo = new javax.swing.JTextField();
-        md_contrasena = new javax.swing.JTextField();
-        md_nmusuario = new javax.swing.JTextField();
-        md_buscar = new javax.swing.JTextField();
-        btn_buscar = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        rb_rut = new javax.swing.JRadioButton();
-        rb_nm = new javax.swing.JRadioButton();
-        rb_id = new javax.swing.JRadioButton();
         rb_masculino = new javax.swing.JRadioButton();
         rb_femenino = new javax.swing.JRadioButton();
         rb_otro = new javax.swing.JRadioButton();
+        jButton3 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblrut = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
@@ -109,7 +93,7 @@ public class revision extends javax.swing.JFrame {
         btn_ingpro = new javax.swing.JButton();
         jLabel26 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        btn_modificarproduc = new javax.swing.JButton();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -120,7 +104,6 @@ public class revision extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
@@ -128,21 +111,17 @@ public class revision extends javax.swing.JFrame {
         jLabel28 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
-        jLabel30 = new javax.swing.JLabel();
         jTextField9 = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
-        jLabel31 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
+        campo_revisarcodigo = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        tblrevisar = new javax.swing.JTable();
+        btn_codver = new javax.swing.JButton();
+        btn_vertodos = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
         jButton8 = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
 
@@ -203,13 +182,13 @@ public class revision extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("<html>Ingrese RUT de usuario a eliminar:</html>");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, 140, -1));
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, 140, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/grupo.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, 90, 120));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 320, 90, 120));
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/grupo.png"))); // NOI18N
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, 90, 130));
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, 90, 130));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/veruser.png"))); // NOI18N
         jButton1.setContentAreaFilled(false);
@@ -218,13 +197,8 @@ public class revision extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, 100, 80));
-
-        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel33.setText("Nombre usuario:");
-        jPanel1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 210, -1, -1));
-        jPanel1.add(dl_userr, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 130, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 370, 100, 80));
+        jPanel1.add(dl_userr, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 130, -1));
 
         dl_user.setText("Eliminar usuario");
         dl_user.addActionListener(new java.awt.event.ActionListener() {
@@ -232,78 +206,12 @@ public class revision extends javax.swing.JFrame {
                 dl_userActionPerformed(evt);
             }
         });
-        jPanel1.add(dl_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 120, -1));
+        jPanel1.add(dl_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 160, 120, -1));
 
         jLabel34.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel34.setForeground(new java.awt.Color(255, 255, 255));
         jLabel34.setText("Eliminar Usuario:");
-        jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 50, -1, -1));
-
-        jLabel35.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel35.setText("Modificar usuarios:");
-        jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 60, -1, -1));
-
-        jLabel36.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel36.setText("Rut:");
-        jPanel1.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 160, -1, -1));
-
-        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel37.setText("Apellido:");
-        jPanel1.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 100, -1, -1));
-
-        jLabel38.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel38.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel38.setText("Nombre:");
-        jPanel1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 100, -1, -1));
-
-        jLabel39.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel39.setText("Sexo:");
-        jPanel1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 160, -1, -1));
-
-        jLabel40.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel40.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel40.setText("Contraseña:");
-        jPanel1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 210, -1, -1));
-        jPanel1.add(md_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 130, 100, -1));
-        jPanel1.add(md_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 130, 100, -1));
-        jPanel1.add(md_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 180, 100, -1));
-        jPanel1.add(md_sexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 180, 100, -1));
-        jPanel1.add(md_contrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 230, 100, -1));
-        jPanel1.add(md_nmusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 230, 100, -1));
-        jPanel1.add(md_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 320, 100, -1));
-
-        btn_buscar.setText("Buscar");
-        btn_buscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_buscarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 320, -1, -1));
-
-        jButton10.setText("Modificar");
-        jPanel1.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 380, -1, -1));
-
-        rb_rut.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        rb_rut.setForeground(new java.awt.Color(255, 255, 255));
-        rb_rut.setText("Rut");
-        rb_rut.setOpaque(false);
-        jPanel1.add(rb_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 280, -1, -1));
-
-        rb_nm.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        rb_nm.setForeground(new java.awt.Color(255, 255, 255));
-        rb_nm.setText("Nombre usuario");
-        rb_nm.setOpaque(false);
-        jPanel1.add(rb_nm, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 280, -1, -1));
-
-        rb_id.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        rb_id.setForeground(new java.awt.Color(255, 255, 255));
-        rb_id.setText("Id");
-        rb_id.setOpaque(false);
-        jPanel1.add(rb_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 280, -1, -1));
+        jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 60, -1, -1));
 
         rb_masculino.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rb_masculino.setForeground(new java.awt.Color(255, 255, 255));
@@ -322,6 +230,26 @@ public class revision extends javax.swing.JFrame {
         rb_otro.setText("Otro");
         rb_otro.setContentAreaFilled(false);
         jPanel1.add(rb_otro, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, -1, -1));
+
+        jButton3.setText("Ver");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 130, -1, -1));
+
+        tblrut.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null}
+            },
+            new String [] {
+                "RUT", "NOMBRE", "APELLIDO"
+            }
+        ));
+        jScrollPane1.setViewportView(tblrut);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 130, 260, 50));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bodeeee.jpg"))); // NOI18N
@@ -375,9 +303,14 @@ public class revision extends javax.swing.JFrame {
         jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cajas.png"))); // NOI18N
         jPanel2.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, -1, -1));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificare.png"))); // NOI18N
-        jButton2.setContentAreaFilled(false);
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, -1));
+        btn_modificarproduc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificare.png"))); // NOI18N
+        btn_modificarproduc.setContentAreaFilled(false);
+        btn_modificarproduc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_modificarproducActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_modificarproduc, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, -1));
 
         jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cajas.png"))); // NOI18N
         jPanel2.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, -1, -1));
@@ -425,11 +358,6 @@ public class revision extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Cantidad:");
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
-
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Cantidad:");
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, -1, -1));
         jPanel3.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 110, -1));
         jPanel3.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 110, -1));
 
@@ -451,23 +379,13 @@ public class revision extends javax.swing.JFrame {
         jLabel29.setText("Ver datos del codigo:");
         jPanel3.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 100, -1, -1));
         jPanel3.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 120, -1));
-
-        jLabel30.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel30.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel30.setText("Codigo:");
-        jPanel3.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, -1, -1));
         jPanel3.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 120, -1));
 
         jButton5.setText("Retiro");
         jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, -1, -1));
+        jPanel3.add(campo_revisarcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 130, 140, -1));
 
-        jLabel31.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel31.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel31.setText("Mermas:");
-        jPanel3.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, -1, -1));
-        jPanel3.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 130, 140, -1));
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblrevisar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -496,15 +414,25 @@ public class revision extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(jTable1);
+        jScrollPane2.setViewportView(tblrevisar);
 
         jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, 370, 200));
 
-        jButton6.setText("Buscar");
-        jPanel3.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 160, -1, -1));
+        btn_codver.setText("Buscar");
+        btn_codver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_codverActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btn_codver, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 160, -1, -1));
 
-        jButton7.setText("Mostrar todos");
-        jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 420, -1, -1));
+        btn_vertodos.setText("Mostrar todos");
+        btn_vertodos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_vertodosActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btn_vertodos, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 420, -1, -1));
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/camion.png"))); // NOI18N
         jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 130, 130));
@@ -518,13 +446,11 @@ public class revision extends javax.swing.JFrame {
         jLabel44.setForeground(new java.awt.Color(255, 255, 255));
         jLabel44.setText("Codigo:");
         jPanel3.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, -1, -1));
-        jPanel3.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 90, -1));
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Cantidad:");
         jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, -1, -1));
-        jPanel3.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 90, -1));
 
         jButton8.setText("Aceptar");
         jPanel3.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 260, -1, -1));
@@ -586,27 +512,22 @@ public class revision extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_ingresarusuActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        modificarusuarios mu = new modificarusuarios();
+        nuevamod mu = new nuevamod();
         
         mu.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void dl_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dl_userActionPerformed
         if (dl_userr.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
         }else{
            
           String rutsu=dl_userr.getText();
-          cb.DELUSUARIO(rutsu); 
+          cb.DELUSUARIO(rutsu);
+          dl_userr.setText("");
         }
 
     }//GEN-LAST:event_dl_userActionPerformed
-
-    private void btn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarActionPerformed
-       
-        String md=md_buscar.getText();
-        cb.MDUSUARIO(md, md_nombre);
-    }//GEN-LAST:event_btn_buscarActionPerformed
 
     private void btn_ingproActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ingproActionPerformed
         
@@ -615,7 +536,7 @@ public class revision extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION);
         }else{
         
-        String codigo= campo_codigo.getText();
+        int codigo =Integer.parseInt(campo_codigo.getText());
         String nombre = campo_nompro.getText();
         int cantidad = Integer.parseInt(campo_cantpro.getText());
         int a,c;
@@ -630,6 +551,37 @@ public class revision extends javax.swing.JFrame {
         }
         }
     }//GEN-LAST:event_btn_ingproActionPerformed
+
+    private void btn_codverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_codverActionPerformed
+        if (campo_revisarcodigo.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+        }else{
+        int cod=Integer.parseInt(campo_revisarcodigo.getText());
+//        String cod = campo_revisarcodigo.getText();
+        cb.verporcod(tblrevisar, cod);
+        }
+    }//GEN-LAST:event_btn_codverActionPerformed
+
+    private void btn_vertodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_vertodosActionPerformed
+        cb.verporcodtodos(tblrevisar);
+    }//GEN-LAST:event_btn_vertodosActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+
+        if (dl_userr.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+        }else{
+        String rut = dl_userr.getText();
+        cb.mostrarrut(tblrut, rut);
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void btn_modificarproducActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_modificarproducActionPerformed
+        modificarproducto mp = new modificarproducto();
+        
+        mp.setVisible(true);        
+    }//GEN-LAST:event_btn_modificarproducActionPerformed
 
     /**
      * @param args the command line arguments
@@ -667,9 +619,11 @@ public class revision extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_buscar;
+    private javax.swing.JButton btn_codver;
     private javax.swing.JButton btn_ingpro;
     private javax.swing.JButton btn_ingresarusu;
+    private javax.swing.JButton btn_modificarproduc;
+    private javax.swing.JButton btn_vertodos;
     private javax.swing.JTextField campo_apellido;
     private javax.swing.JTextField campo_cantpro;
     private javax.swing.JTextField campo_codigo;
@@ -677,20 +631,17 @@ public class revision extends javax.swing.JFrame {
     private javax.swing.JTextField campo_nombre;
     private javax.swing.JTextField campo_nompro;
     private javax.swing.JTextField campo_nusuario;
+    private javax.swing.JTextField campo_revisarcodigo;
     private javax.swing.JTextField campo_rut;
     private javax.swing.JButton dl_user;
     private javax.swing.JTextField dl_userr;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -709,18 +660,9 @@ public class revision extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
@@ -733,32 +675,21 @@ public class revision extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
-    private javax.swing.JTextField md_apellido;
-    private javax.swing.JTextField md_buscar;
-    private javax.swing.JTextField md_contrasena;
-    private javax.swing.JTextField md_nmusuario;
-    private javax.swing.JTextField md_nombre;
-    private javax.swing.JTextField md_rut;
-    private javax.swing.JTextField md_sexo;
     private javax.swing.JRadioButton rb_ba;
     private javax.swing.JRadioButton rb_bf;
     private javax.swing.JRadioButton rb_femenino;
-    private javax.swing.JRadioButton rb_id;
     private javax.swing.JRadioButton rb_masculino;
-    private javax.swing.JRadioButton rb_nm;
     private javax.swing.JRadioButton rb_otro;
     private javax.swing.JRadioButton rb_pasa;
     private javax.swing.JRadioButton rb_pasb;
-    private javax.swing.JRadioButton rb_rut;
+    private javax.swing.JTable tblrevisar;
+    private javax.swing.JTable tblrut;
     // End of variables declaration//GEN-END:variables
 }
