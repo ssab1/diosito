@@ -766,7 +766,8 @@ public class modificarproducto extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
         String cat = campo_categoria.getText();
-        cb.IDCategoria(cat); 
+        cb.IDCategoria(cat);
+        campo_categoria.setText("");
         }
     }//GEN-LAST:event_btn_ingresoActionPerformed
 
@@ -779,6 +780,8 @@ public class modificarproducto extends javax.swing.JFrame {
         String pas = campo_pasillo.getText();
         String rack = campo_rack.getText();
         cb.IDSeccion(pas, rack);
+        campo_rack.setText("");
+        campo_pasillo.setText("");
         }
     }//GEN-LAST:event_btn_ingreso2ActionPerformed
 
