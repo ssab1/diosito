@@ -6,6 +6,7 @@
 package Grafica;
 
 import Codigo.Creacion_bbdd;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,8 +19,12 @@ public class modificarproducto extends javax.swing.JFrame {
      * Creates new form modificarproducto
      */
     Creacion_bbdd cb;
+    
     public modificarproducto() {
         initComponents();
+        ImageIcon yalerojo = new ImageIcon (modificarproducto.class.getResource("/Imagenes/yalerojo.png"));
+        this.setIconImage(yalerojo.getImage());
+        this.setTitle("BODEGAS SSAB");
         cb = new Creacion_bbdd();
     }
 
@@ -59,6 +64,7 @@ public class modificarproducto extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         txt_cod = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
@@ -66,6 +72,7 @@ public class modificarproducto extends javax.swing.JFrame {
         tblproductos = new javax.swing.JTable();
         btn_salir2 = new javax.swing.JButton();
         btn_verpro = new javax.swing.JButton();
+        jLabel38 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
@@ -84,6 +91,7 @@ public class modificarproducto extends javax.swing.JFrame {
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        jLabel39 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
@@ -101,6 +109,7 @@ public class modificarproducto extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
+        jLabel40 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
@@ -121,6 +130,7 @@ public class modificarproducto extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         limpiar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel41 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -285,6 +295,9 @@ public class modificarproducto extends javax.swing.JFrame {
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
         jPanel1.add(txt_cod, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 110, -1));
 
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yalerojo73.png"))); // NOI18N
+        jPanel1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, -1, -1));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bt.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 380));
 
@@ -351,6 +364,9 @@ public class modificarproducto extends javax.swing.JFrame {
             }
         });
         jPanel2.add(btn_verpro, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, -1, -1));
+
+        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yalerojo73.png"))); // NOI18N
+        jPanel2.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, -1, -1));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bt.jpg"))); // NOI18N
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 380));
@@ -427,6 +443,9 @@ public class modificarproducto extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, -1, -1));
+
+        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yalerojo73.png"))); // NOI18N
+        jPanel3.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, -1, -1));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bt.jpg"))); // NOI18N
         jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 380));
@@ -555,6 +574,9 @@ public class modificarproducto extends javax.swing.JFrame {
         });
         jPanel4.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, -1, -1));
 
+        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yalerojo73.png"))); // NOI18N
+        jPanel4.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, -1, -1));
+
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bt.jpg"))); // NOI18N
         jPanel4.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 380));
 
@@ -650,6 +672,9 @@ public class modificarproducto extends javax.swing.JFrame {
         });
         jPanel5.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, -1, -1));
 
+        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yalerojo73.png"))); // NOI18N
+        jPanel5.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, -1, -1));
+
         jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bt.jpg"))); // NOI18N
         jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 380));
 
@@ -679,7 +704,8 @@ public class modificarproducto extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         if (txt_codigo.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            ImageIcon vacio = new ImageIcon (modificarproducto.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
         int codigo = Integer.parseInt(txt_codigo.getText());
         cb.VERPRODUC(codigo, tblseccion, txt_nombre, txt_cantidad, txt_idcat, txt_idsec,txt_cod);
@@ -706,7 +732,8 @@ public class modificarproducto extends javax.swing.JFrame {
     private void btn_modproActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_modproActionPerformed
         if (txt_nombre.getText().equals("")||txt_cantidad.getText().equals("")||txt_idcat.getText().equals("")||
                 txt_idsec.getText().equals("")||txt_cod.getText().equals("")||txt_codigo.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            ImageIcon vacio = new ImageIcon (modificarproducto.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
        
         String nombre = txt_nombre.getText();
@@ -733,7 +760,8 @@ public class modificarproducto extends javax.swing.JFrame {
     private void btn_ingresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ingresoActionPerformed
 
         if (campo_categoria.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            ImageIcon vacio = new ImageIcon (modificarproducto.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
         String cat = campo_categoria.getText();
         cb.IDCategoria(cat); 
@@ -743,7 +771,8 @@ public class modificarproducto extends javax.swing.JFrame {
     private void btn_ingreso2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ingreso2ActionPerformed
         
         if (campo_pasillo.getText().equals("")||campo_rack.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            ImageIcon vacio = new ImageIcon (modificarproducto.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
         String pas = campo_pasillo.getText();
         String rack = campo_rack.getText();
@@ -765,7 +794,8 @@ public class modificarproducto extends javax.swing.JFrame {
 
     private void btn_el_catActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_el_catActionPerformed
         if (txtcate.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            ImageIcon vacio = new ImageIcon (modificarproducto.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
             int id = Integer.parseInt(txtcate.getText());
         cb.delcat(id);
@@ -775,7 +805,8 @@ public class modificarproducto extends javax.swing.JFrame {
 
     private void btn_el_secActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_el_secActionPerformed
         if (txtsecc.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            ImageIcon vacio = new ImageIcon (modificarproducto.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
             int id = Integer.parseInt(txtsecc.getText());
         cb.delsec(id);
@@ -786,7 +817,8 @@ public class modificarproducto extends javax.swing.JFrame {
     private void ver_catidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ver_catidActionPerformed
         
         if (txtidcat.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            ImageIcon vacio = new ImageIcon (modificarproducto.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
             int id = Integer.parseInt(txtidcat.getText());
         cb.VERPORCAR(txtnmcat, id);
@@ -795,7 +827,8 @@ public class modificarproducto extends javax.swing.JFrame {
 
     private void ver_idcataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ver_idcataActionPerformed
                 if (txtidsec.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+                    ImageIcon vacio = new ImageIcon (modificarproducto.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
             int id = Integer.parseInt(txtidsec.getText());
         cb.VERPORSEC(txtpasec, txtrasec, id);
@@ -822,7 +855,8 @@ public class modificarproducto extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         if (txtpasec.getText().equals("")||txtrasec.getText().equals("")||txtidsec.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            ImageIcon vacio = new ImageIcon (modificarproducto.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
             int id =Integer.parseInt(txtidsec.getText());
             String pasillo=txtpasec.getText();
@@ -836,7 +870,8 @@ public class modificarproducto extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         if (txtidcat.getText().equals("")||txtnmcat.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            ImageIcon vacio = new ImageIcon (modificarproducto.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
             int id =Integer.parseInt(txtidcat.getText());
             String nombre=txtnmcat.getText();
@@ -925,6 +960,7 @@ public class modificarproducto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
@@ -932,7 +968,11 @@ public class modificarproducto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

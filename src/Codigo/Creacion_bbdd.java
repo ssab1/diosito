@@ -58,27 +58,6 @@ public class Creacion_bbdd {
         System.out.println("tabla creada!!"); 
         
     }//
-    public void IDTIPOUSUARIO(){
-       
-        try{
-            Class.forName(DRIVER);
-            conexion = DriverManager.getConnection(URL);
-            
-            sentencia = conexion.createStatement();
-            String sql = "INSERT INTO TIPO_USUARIO("+
-                    "TIPO_USER) VALUES ( 'ADMINISTRADOR')";
-            
-            sentencia.executeUpdate(sql);
-            sentencia.close();
-            conexion.close();
-            
-        }catch(ClassNotFoundException | SQLException e){
-            JOptionPane.showMessageDialog(null, "Error: " + e, 
-                    "Error!!", JOptionPane.ERROR_MESSAGE);
-        }
-        System.out.println("datos ingresados!!"); 
-        
-    }//
         
     
     //--------------------------------------------------------------------------------------------------------------------// 
@@ -199,8 +178,9 @@ public class Creacion_bbdd {
             conexion.close();
             
         }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
             JOptionPane.showMessageDialog(null, "Error: " + e, 
-                    "Error!!", JOptionPane.ERROR_MESSAGE);
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
         }
     }
     
@@ -226,8 +206,9 @@ public class Creacion_bbdd {
             conexion.close();
             
         }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
             JOptionPane.showMessageDialog(null, "Error: " + e, 
-                    "Error!!", JOptionPane.ERROR_MESSAGE);
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
         }
     }
     
@@ -267,10 +248,13 @@ public class Creacion_bbdd {
             resultados.close();
             sentencia.close();
             conexion.close();
+            ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
+            JOptionPane.showMessageDialog(null, "Datos modificados!!",  "MENSAJE", JOptionPane.ERROR_MESSAGE,ingresados);
             
         }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
             JOptionPane.showMessageDialog(null, "Error: " + e, 
-                    "Error!!", JOptionPane.ERROR_MESSAGE);
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
         }
     }
     public void IDMODIFICAR(int id,String nombre,String apellido,String rut,String m,String nm_usuario,String contrasena){
@@ -288,7 +272,7 @@ public class Creacion_bbdd {
             sentencia.close();
             conexion.close();
             ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
-            JOptionPane.showMessageDialog(null,"Datos ingresados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
+            JOptionPane.showMessageDialog(null, "Datos modificados!!",  "MENSAJE", JOptionPane.ERROR_MESSAGE,ingresados);
             
         }catch(ClassNotFoundException | SQLException e){
             ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
@@ -337,12 +321,15 @@ public class Creacion_bbdd {
             sentencia.executeUpdate(sql);
             sentencia.close();
             conexion.close();
-            
+            ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
+            JOptionPane.showMessageDialog(null, "Datos ingresados!!", 
+                    "MENSAJE", JOptionPane.ERROR_MESSAGE,ingresados);
         }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
             JOptionPane.showMessageDialog(null, "Error: " + e, 
-                    "Error!!", JOptionPane.ERROR_MESSAGE);
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
         }
-        System.out.println("datos ingresados!!"); 
+         
         
     }//
     //--------------------------------------------------------------------------------------------------------//
@@ -382,12 +369,13 @@ public class Creacion_bbdd {
             sentencia.executeUpdate(sql);
             sentencia.close();
             conexion.close();
-            
+           ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
+           JOptionPane.showMessageDialog(null, "Datos ingresados!!",  "MENSAJE", JOptionPane.ERROR_MESSAGE,ingresados);
         }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
             JOptionPane.showMessageDialog(null, "Error: " + e, 
-                    "Error!!", JOptionPane.ERROR_MESSAGE);
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
         }
-        System.out.println("datos ingresados!!"); 
         
     }//
 
@@ -436,7 +424,7 @@ public class Creacion_bbdd {
             sentencia.close();
             conexion.close();
             ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
-            JOptionPane.showMessageDialog(null,"Datos ingresados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
+            JOptionPane.showMessageDialog(null, "Datos ingresados!!",  "MENSAJE", JOptionPane.ERROR_MESSAGE,ingresados);
             
         }catch(ClassNotFoundException | SQLException e){
             ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
@@ -471,8 +459,9 @@ public class Creacion_bbdd {
             conexion.close();
             
         }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
             JOptionPane.showMessageDialog(null, "Error: " + e, 
-                    "Error!!", JOptionPane.ERROR_MESSAGE);
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
         }
     }
     //--------------------------------------------------------------------------------------------------------------------------//
@@ -498,8 +487,9 @@ public class Creacion_bbdd {
             conexion.close();
             
         }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
             JOptionPane.showMessageDialog(null, "Error: " + e, 
-                    "Error!!", JOptionPane.ERROR_MESSAGE);
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
         }
     }
     public void versec2(JTable tblseccion2){
@@ -524,8 +514,9 @@ public class Creacion_bbdd {
             conexion.close();
             
         }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
             JOptionPane.showMessageDialog(null, "Error: " + e, 
-                    "Error!!", JOptionPane.ERROR_MESSAGE);
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
         }
     }
             //--------------------------------------------------------------------------------------------------------------------------//
@@ -550,8 +541,9 @@ public class Creacion_bbdd {
             conexion.close();
             
         }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
             JOptionPane.showMessageDialog(null, "Error: " + e, 
-                    "Error!!", JOptionPane.ERROR_MESSAGE);
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
         }
     }
    public void vercat2(JTable tblcategoria2){
@@ -575,8 +567,9 @@ public class Creacion_bbdd {
             conexion.close();
             
         }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
             JOptionPane.showMessageDialog(null, "Error: " + e, 
-                    "Error!!", JOptionPane.ERROR_MESSAGE);
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
         }
     }
     //--------------------------------------------------------------------------------------------------------------------------//
@@ -602,8 +595,9 @@ public class Creacion_bbdd {
             conexion.close();
             
         }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
             JOptionPane.showMessageDialog(null, "Error: " + e, 
-                    "Error!!", JOptionPane.ERROR_MESSAGE);
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
         }
     }
     //---------------------------------------------------------------------------------------------------------------------//
@@ -626,8 +620,9 @@ public class Creacion_bbdd {
             conexion.close();
             
         }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
             JOptionPane.showMessageDialog(null, "Error: " + e, 
-                    "Error!!", JOptionPane.ERROR_MESSAGE);
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
         }
     }
      //---------------------------------------------------------------------------------------------------------------------//
@@ -646,7 +641,7 @@ public class Creacion_bbdd {
             sentencia.close();
             conexion.close();
             ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
-            JOptionPane.showMessageDialog(null,"Datos ingresados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
+            JOptionPane.showMessageDialog(null,"Datos modificados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
             
         }catch(ClassNotFoundException | SQLException e){
             ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
@@ -683,8 +678,9 @@ public class Creacion_bbdd {
             conexion.close();
             
         }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
             JOptionPane.showMessageDialog(null, "Error: " + e, 
-                    "Error!!", JOptionPane.ERROR_MESSAGE);
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
         }
     }
         
@@ -702,7 +698,7 @@ public class Creacion_bbdd {
             sentencia.close();
             conexion.close();
             ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
-            JOptionPane.showMessageDialog(null,"Datos ingresados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
+            JOptionPane.showMessageDialog(null,"Datos modificados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
             
         }catch(ClassNotFoundException | SQLException e){
             ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
@@ -727,7 +723,7 @@ public class Creacion_bbdd {
             sentencia.close();
             conexion.close();
             ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
-            JOptionPane.showMessageDialog(null,"Datos ingresados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
+            JOptionPane.showMessageDialog(null,"Datos modificados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
             
         }catch(ClassNotFoundException | SQLException e){
             ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
@@ -751,7 +747,7 @@ public class Creacion_bbdd {
             sentencia.close();
             conexion.close();
             ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
-            JOptionPane.showMessageDialog(null,"Datos ingresados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
+            JOptionPane.showMessageDialog(null,"Datos eliminados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
             
         }catch(ClassNotFoundException | SQLException e){
             ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
@@ -774,7 +770,7 @@ public class Creacion_bbdd {
             sentencia.close();
             conexion.close();
             ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
-            JOptionPane.showMessageDialog(null,"Datos ingresados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
+            JOptionPane.showMessageDialog(null,"Datos eliminados!!","Mensaje",JOptionPane.DEFAULT_OPTION,ingresados);
             
         }catch(ClassNotFoundException | SQLException e){
             ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
@@ -802,8 +798,9 @@ public class Creacion_bbdd {
             conexion.close();
             
         }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
             JOptionPane.showMessageDialog(null, "Error: " + e, 
-                    "Error!!", JOptionPane.ERROR_MESSAGE);
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
         }
     }
     
@@ -824,8 +821,9 @@ public class Creacion_bbdd {
             conexion.close();
             
         }catch(ClassNotFoundException | SQLException e){
+            ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
             JOptionPane.showMessageDialog(null, "Error: " + e, 
-                    "Error!!", JOptionPane.ERROR_MESSAGE);
+                    "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
         }
     }
     

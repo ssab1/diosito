@@ -7,6 +7,7 @@ package Grafica;
 
 import Codigo.Creacion_bbdd;
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 
@@ -23,6 +24,9 @@ public class nuevamod extends javax.swing.JFrame {
     Creacion_bbdd cb;
     public nuevamod() {
         initComponents();
+        ImageIcon yalerojo = new ImageIcon (nuevamod.class.getResource("/Imagenes/yalerojo.png"));
+        this.setIconImage(yalerojo.getImage());
+        this.setTitle("BODEGAS SSAB");
         configurarRB();
         cb = new Creacion_bbdd();
     }
@@ -68,6 +72,7 @@ public class nuevamod extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_moduser = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
+        jLabel30 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -75,6 +80,7 @@ public class nuevamod extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         btn_salir = new javax.swing.JButton();
         btn_mostar = new javax.swing.JButton();
+        jLabel31 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -181,6 +187,9 @@ public class nuevamod extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 340, -1, -1));
 
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yalerojo73.png"))); // NOI18N
+        jPanel1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, -1, -1));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bt.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 390));
 
@@ -248,6 +257,9 @@ public class nuevamod extends javax.swing.JFrame {
         });
         jPanel3.add(btn_mostar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, -1, -1));
 
+        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yalerojo73.png"))); // NOI18N
+        jPanel3.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 20, -1, -1));
+
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bt.jpg"))); // NOI18N
         jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 390));
 
@@ -271,8 +283,8 @@ public class nuevamod extends javax.swing.JFrame {
 
                 if (campo_contrasena.getText().equals("") || campo_nombre.getText().equals("") ||campo_apellido.getText().equals("") ||
             campo_rut.getText().equals("") || campo_nmusuario.getText().equals("") ) {
-            
-            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            ImageIcon vacio = new ImageIcon (nuevamod.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
             int id = Integer.parseInt(campo_id.getText());
             String contrasena = campo_contrasena.getText();
@@ -316,7 +328,8 @@ public class nuevamod extends javax.swing.JFrame {
 
     private void ver_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ver_idActionPerformed
         if (campo_id.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            ImageIcon vacio = new ImageIcon (nuevamod.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
         
         int id= Integer.parseInt(campo_id.getText());
@@ -387,6 +400,8 @@ public class nuevamod extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

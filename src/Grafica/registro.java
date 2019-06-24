@@ -5,6 +5,7 @@
  */
 package Grafica;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,6 +21,9 @@ public class registro extends javax.swing.JFrame {
     public registro() {
         this.setResizable(false);
         initComponents();
+        ImageIcon yalerojo = new ImageIcon (registro.class.getResource("/Imagenes/yalerojo.png"));
+        this.setIconImage(yalerojo.getImage());
+        this.setTitle("BODEGAS SSAB");
         ver = new Codigo.inicio_secion();
     }
 
@@ -40,6 +44,7 @@ public class registro extends javax.swing.JFrame {
         btn_sesion = new javax.swing.JButton();
         btn_salir = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -80,6 +85,9 @@ public class registro extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/grupo.png"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 80, 110));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yalerojo73.png"))); // NOI18N
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 80, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/negro.jpeg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 400));
@@ -150,5 +158,6 @@ public class registro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }

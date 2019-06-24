@@ -10,6 +10,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.ImageIcon;
 
 public class inicio_secion {
     Connection conexion = null;
@@ -35,11 +36,12 @@ public class inicio_secion {
         rv.setVisible(true);
 //        registro rr = new registro();
 //        rr.setVisible(true);
-        
-            JOptionPane.showMessageDialog(null,"BIENVENIDO \n" + usuario,"Bienvenida",JOptionPane.DEFAULT_OPTION);
+        ImageIcon user = new ImageIcon (inicio_secion.class.getResource("/Imagenes/user.png"));
+            JOptionPane.showMessageDialog(null,"BIENVENIDO \n" + usuario,"Bienvenida",JOptionPane.DEFAULT_OPTION,user);
         }
         if (key==0) {
-            JOptionPane.showMessageDialog(null,"Usuario y/o contraseña incorrecto","Error",JOptionPane.DEFAULT_OPTION);
+            ImageIcon mal = new ImageIcon (inicio_secion.class.getResource("/Imagenes/mal.png"));
+            JOptionPane.showMessageDialog(null,"Usuario y/o contraseña incorrecto","Error",JOptionPane.DEFAULT_OPTION,mal);
         registro rr = new registro();
         rr.setVisible(true);
                  

@@ -7,6 +7,7 @@ package Grafica;
 
 import Codigo.Creacion_bbdd;
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,6 +20,9 @@ public class revision extends javax.swing.JFrame {
     public revision() {
         this.setResizable(false);
         initComponents();
+        ImageIcon yalerojo = new ImageIcon (revision.class.getResource("/Imagenes/yalerojo.png"));
+        this.setIconImage(yalerojo.getImage());
+        this.setTitle("BODEGAS SSAB");
         configurarRB();
         configurarRBB();
         configurarRBBB();
@@ -81,6 +85,7 @@ public class revision extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblrut = new javax.swing.JTable();
         jButton6 = new javax.swing.JButton();
+        jLabel30 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
@@ -101,6 +106,7 @@ public class revision extends javax.swing.JFrame {
         rb_pasb = new javax.swing.JRadioButton();
         rb_pasa = new javax.swing.JRadioButton();
         jButton2 = new javax.swing.JButton();
+        jLabel32 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -123,6 +129,7 @@ public class revision extends javax.swing.JFrame {
         jLabel44 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
+        jLabel31 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -259,6 +266,9 @@ public class revision extends javax.swing.JFrame {
         });
         jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 400, -1, -1));
 
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yalerojo73.png"))); // NOI18N
+        jPanel1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, -1, -1));
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bodeeee.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 470));
@@ -354,6 +364,9 @@ public class revision extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, -1, -1));
+
+        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yalerojo73.png"))); // NOI18N
+        jPanel2.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, -1, -1));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bodeeee.jpg"))); // NOI18N
         jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
@@ -478,6 +491,9 @@ public class revision extends javax.swing.JFrame {
         });
         jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 420, -1, -1));
 
+        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yalerojo73.png"))); // NOI18N
+        jPanel3.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, -1, -1));
+
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bodeeee.jpg"))); // NOI18N
         jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 480));
 
@@ -492,8 +508,8 @@ public class revision extends javax.swing.JFrame {
 
         if (campo_contrasena.getText().equals("") || campo_nombre.getText().equals("") ||campo_apellido.getText().equals("") ||
             campo_rut.getText().equals("") || campo_nusuario.getText().equals("") ) {
-            
-            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            ImageIcon vacio = new ImageIcon (revision.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
 
             String contrasena = campo_contrasena.getText();
@@ -542,7 +558,8 @@ public class revision extends javax.swing.JFrame {
 
     private void dl_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dl_userActionPerformed
         if (dl_userr.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            ImageIcon vacio = new ImageIcon (revision.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
            
           String rutsu=dl_userr.getText();
@@ -556,7 +573,8 @@ public class revision extends javax.swing.JFrame {
         
         
         if (campo_codigo.getText().equals("") || campo_nompro.getText().equals("") || campo_cantpro.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            ImageIcon vacio = new ImageIcon (revision.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
         
         int codigo =Integer.parseInt(campo_codigo.getText());
@@ -583,7 +601,8 @@ public class revision extends javax.swing.JFrame {
 
     private void btn_codverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_codverActionPerformed
         if (campo_revisarcodigo.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            ImageIcon vacio = new ImageIcon (revision.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
         int cod=Integer.parseInt(campo_revisarcodigo.getText());
 //        String cod = campo_revisarcodigo.getText();
@@ -600,7 +619,8 @@ public class revision extends javax.swing.JFrame {
 
 
         if (dl_userr.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            ImageIcon vacio = new ImageIcon (revision.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "El campo esta vacio!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
         String rut = dl_userr.getText();
         cb.mostrarrut(tblrut, rut);
@@ -628,7 +648,8 @@ public class revision extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         
         if (txt_cantidad1.getText().equals("")||txt_codigo1.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            ImageIcon vacio = new ImageIcon (revision.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
         int codigo = Integer.parseInt(txt_codigo1.getText());
         int cantidad = Integer.parseInt(txt_cantidad1.getText());
@@ -640,7 +661,8 @@ public class revision extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         if (txt_cantidad2.getText().equals("")||txt_codigo2.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION);
+            ImageIcon vacio = new ImageIcon (revision.class.getResource("/Imagenes/vacio.png"));
+            JOptionPane.showMessageDialog(null, "Hay campos vacios!!","Mensaje",JOptionPane.DEFAULT_OPTION,vacio);
         }else{
         
         int codigo = Integer.parseInt(txt_codigo2.getText());
@@ -729,6 +751,9 @@ public class revision extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel41;
