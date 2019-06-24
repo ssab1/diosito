@@ -23,10 +23,12 @@ public class nuevamod extends javax.swing.JFrame {
      */
     Creacion_bbdd cb;
     public nuevamod() {
+        this.setResizable(false);
         initComponents();
         ImageIcon yalerojo = new ImageIcon (nuevamod.class.getResource("/Imagenes/yalerojo.png"));
         this.setIconImage(yalerojo.getImage());
         this.setTitle("BODEGAS SSAB");
+        setLocationRelativeTo(null);
         configurarRB();
         cb = new Creacion_bbdd();
     }

@@ -20,13 +20,16 @@ public class revision extends javax.swing.JFrame {
     public revision() {
         this.setResizable(false);
         initComponents();
+        setLocationRelativeTo(null);
         ImageIcon yalerojo = new ImageIcon (revision.class.getResource("/Imagenes/yalerojo.png"));
         this.setIconImage(yalerojo.getImage());
         this.setTitle("BODEGAS SSAB");
+        
+        panel_pestaña.setEnabledAt(2,false);
         configurarRB();
         configurarRBB();
         configurarRBBB();
-        setLocationRelativeTo(null);
+        
         cb = new Creacion_bbdd();
     }
     public void configurarRB(){
@@ -56,7 +59,52 @@ public class revision extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        panel_pestaña = new javax.swing.JTabbedPane();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        campo_codigo = new javax.swing.JTextField();
+        campo_nompro = new javax.swing.JTextField();
+        campo_cantpro = new javax.swing.JTextField();
+        btn_ingpro = new javax.swing.JButton();
+        jLabel26 = new javax.swing.JLabel();
+        btn_modificarproduc = new javax.swing.JButton();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        rb_bf = new javax.swing.JRadioButton();
+        rb_ba = new javax.swing.JRadioButton();
+        rb_pasb = new javax.swing.JRadioButton();
+        rb_pasa = new javax.swing.JRadioButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel32 = new javax.swing.JLabel();
+        cb_desbloquear = new javax.swing.JCheckBox();
+        jLabel16 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        txt_codigo2 = new javax.swing.JTextField();
+        txt_cantidad2 = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        txt_codigo1 = new javax.swing.JTextField();
+        txt_cantidad1 = new javax.swing.JTextField();
+        jButton5 = new javax.swing.JButton();
+        campo_revisarcodigo = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblrevisar = new javax.swing.JTable();
+        btn_codver = new javax.swing.JButton();
+        btn_vertodos = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -87,53 +135,244 @@ public class revision extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jLabel30 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        campo_codigo = new javax.swing.JTextField();
-        campo_nompro = new javax.swing.JTextField();
-        campo_cantpro = new javax.swing.JTextField();
-        btn_ingpro = new javax.swing.JButton();
-        jLabel26 = new javax.swing.JLabel();
-        btn_modificarproduc = new javax.swing.JButton();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        rb_bf = new javax.swing.JRadioButton();
-        rb_ba = new javax.swing.JRadioButton();
-        rb_pasb = new javax.swing.JRadioButton();
-        rb_pasa = new javax.swing.JRadioButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        txt_codigo2 = new javax.swing.JTextField();
-        txt_cantidad2 = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        txt_codigo1 = new javax.swing.JTextField();
-        txt_cantidad1 = new javax.swing.JTextField();
-        jButton5 = new javax.swing.JButton();
-        campo_revisarcodigo = new javax.swing.JTextField();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        tblrevisar = new javax.swing.JTable();
-        btn_codver = new javax.swing.JButton();
-        btn_vertodos = new javax.swing.JButton();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("Categoria:");
+        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel23.setText("Codigo:");
+        jPanel2.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel24.setText("Nombre:");
+        jPanel2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
+
+        jLabel25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel25.setText("Seccion:");
+        jPanel2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, -1));
+
+        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel27.setText("Cantidad:");
+        jPanel2.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
+        jPanel2.add(campo_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 110, -1));
+        jPanel2.add(campo_nompro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 110, -1));
+        jPanel2.add(campo_cantpro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 110, -1));
+
+        btn_ingpro.setText("Ingresar producto");
+        btn_ingpro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ingproActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_ingpro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
+
+        jLabel26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel26.setText("Ingreso producto nuevo:");
+        jPanel2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
+
+        btn_modificarproduc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificare.png"))); // NOI18N
+        btn_modificarproduc.setContentAreaFilled(false);
+        btn_modificarproduc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_modificarproducActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_modificarproduc, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, -1, -1));
+
+        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cajas.png"))); // NOI18N
+        jPanel2.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, -1, -1));
+
+        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cajas.png"))); // NOI18N
+        jPanel2.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, -1, -1));
+
+        rb_bf.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        rb_bf.setForeground(new java.awt.Color(255, 255, 255));
+        rb_bf.setText("Bebidas de fantasia");
+        rb_bf.setContentAreaFilled(false);
+        jPanel2.add(rb_bf, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
+
+        rb_ba.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        rb_ba.setForeground(new java.awt.Color(255, 255, 255));
+        rb_ba.setText("Bebidas alcoholica");
+        rb_ba.setContentAreaFilled(false);
+        jPanel2.add(rb_ba, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
+
+        rb_pasb.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        rb_pasb.setForeground(new java.awt.Color(255, 255, 255));
+        rb_pasb.setText("0-125 Bebidas de fantasia");
+        rb_pasb.setContentAreaFilled(false);
+        jPanel2.add(rb_pasb, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
+
+        rb_pasa.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        rb_pasa.setForeground(new java.awt.Color(255, 255, 255));
+        rb_pasa.setText("126-200 Bebidas acoholica");
+        rb_pasa.setContentAreaFilled(false);
+        jPanel2.add(rb_pasa, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, -1));
+
+        jButton2.setText("Salir");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, -1, -1));
+
+        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yalerojo73.png"))); // NOI18N
+        jPanel2.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 10, -1, -1));
+
+        cb_desbloquear.setBackground(new java.awt.Color(204, 204, 204));
+        cb_desbloquear.setForeground(new java.awt.Color(204, 204, 204));
+        cb_desbloquear.setContentAreaFilled(false);
+        cb_desbloquear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/n2.png"))); // NOI18N
+        cb_desbloquear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb_desbloquearActionPerformed(evt);
+            }
+        });
+        jPanel2.add(cb_desbloquear, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, 40, 50));
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bodeeee.jpg"))); // NOI18N
+        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
+
+        panel_pestaña.addTab("Gestion productos", jPanel2);
+
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Cantidad:");
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
+        jPanel3.add(txt_codigo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 110, -1));
+        jPanel3.add(txt_cantidad2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 110, -1));
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Codigo:");
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
+
+        jButton4.setText("Ingresar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
+
+        jLabel28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel28.setText("<html>Ingreso producto por codigo:</html>");
+        jPanel3.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 140, -1));
+
+        jLabel29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel29.setText("Ver datos del codigo:");
+        jPanel3.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 100, -1, -1));
+        jPanel3.add(txt_codigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, 120, -1));
+        jPanel3.add(txt_cantidad1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 120, -1));
+
+        jButton5.setText("Retiro");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, -1, -1));
+        jPanel3.add(campo_revisarcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 130, 140, -1));
+
+        tblrevisar.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Codigo", "Nombre", "Cantidad"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(tblrevisar);
+
+        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, 370, 200));
+
+        btn_codver.setText("Buscar");
+        btn_codver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_codverActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btn_codver, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 160, -1, -1));
+
+        btn_vertodos.setText("Mostrar todos");
+        btn_vertodos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_vertodosActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btn_vertodos, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 420, -1, -1));
+
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/camion.png"))); // NOI18N
+        jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 130, 130));
+
+        jLabel43.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel43.setText("Salida productos:");
+        jPanel3.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, -1, -1));
+
+        jLabel44.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel44.setText("Codigo:");
+        jPanel3.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, -1, -1));
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("Cantidad:");
+        jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, -1, -1));
+
+        jButton7.setText("Salir");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 420, -1, -1));
+
+        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yalerojo73.png"))); // NOI18N
+        jPanel3.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, -1, -1));
+
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bodeeee.jpg"))); // NOI18N
+        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 480));
+
+        panel_pestaña.addTab("Ingreso y salida productos", jPanel3);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -273,233 +512,9 @@ public class revision extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bodeeee.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 470));
 
-        jTabbedPane1.addTab("Gestionar usuarios", jPanel1);
+        panel_pestaña.addTab("Gestionar usuarios", jPanel1);
 
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel17.setText("Categoria:");
-        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
-
-        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel23.setText("Codigo:");
-        jPanel2.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
-
-        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel24.setText("Nombre:");
-        jPanel2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
-
-        jLabel25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel25.setText("Seccion:");
-        jPanel2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, -1));
-
-        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel27.setText("Cantidad:");
-        jPanel2.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
-        jPanel2.add(campo_codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 110, -1));
-        jPanel2.add(campo_nompro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 110, -1));
-        jPanel2.add(campo_cantpro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 110, -1));
-
-        btn_ingpro.setText("Ingresar producto");
-        btn_ingpro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_ingproActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btn_ingpro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
-
-        jLabel26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel26.setText("Ingreso producto nuevo:");
-        jPanel2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
-
-        btn_modificarproduc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificare.png"))); // NOI18N
-        btn_modificarproduc.setContentAreaFilled(false);
-        btn_modificarproduc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_modificarproducActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btn_modificarproduc, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 340, -1, -1));
-
-        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cajas.png"))); // NOI18N
-        jPanel2.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, -1, -1));
-
-        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cajas.png"))); // NOI18N
-        jPanel2.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, -1, -1));
-
-        rb_bf.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        rb_bf.setForeground(new java.awt.Color(255, 255, 255));
-        rb_bf.setText("Bebidas de fantasia");
-        rb_bf.setContentAreaFilled(false);
-        jPanel2.add(rb_bf, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
-
-        rb_ba.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        rb_ba.setForeground(new java.awt.Color(255, 255, 255));
-        rb_ba.setText("Bebidas alcoholica");
-        rb_ba.setContentAreaFilled(false);
-        jPanel2.add(rb_ba, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
-
-        rb_pasb.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        rb_pasb.setForeground(new java.awt.Color(255, 255, 255));
-        rb_pasb.setText("0-125 Bebidas de fantasia");
-        rb_pasb.setContentAreaFilled(false);
-        jPanel2.add(rb_pasb, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
-
-        rb_pasa.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        rb_pasa.setForeground(new java.awt.Color(255, 255, 255));
-        rb_pasa.setText("126-200 Bebidas acoholica");
-        rb_pasa.setContentAreaFilled(false);
-        jPanel2.add(rb_pasa, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, -1));
-
-        jButton2.setText("Salir");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, -1, -1));
-
-        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yalerojo73.png"))); // NOI18N
-        jPanel2.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, -1, -1));
-
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bodeeee.jpg"))); // NOI18N
-        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 470));
-
-        jTabbedPane1.addTab("Gestion productos", jPanel2);
-
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Cantidad:");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
-        jPanel3.add(txt_codigo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 110, -1));
-        jPanel3.add(txt_cantidad2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 110, -1));
-
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Codigo:");
-        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
-
-        jButton4.setText("Ingresar");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
-
-        jLabel28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel28.setText("<html>Ingreso producto por codigo:</html>");
-        jPanel3.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 140, -1));
-
-        jLabel29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel29.setText("Ver datos del codigo:");
-        jPanel3.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 100, -1, -1));
-        jPanel3.add(txt_codigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, 120, -1));
-        jPanel3.add(txt_cantidad1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 120, -1));
-
-        jButton5.setText("Retiro");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, -1, -1));
-        jPanel3.add(campo_revisarcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 130, 140, -1));
-
-        tblrevisar.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Codigo", "Nombre", "Cantidad"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane2.setViewportView(tblrevisar);
-
-        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, 370, 200));
-
-        btn_codver.setText("Buscar");
-        btn_codver.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_codverActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btn_codver, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 160, -1, -1));
-
-        btn_vertodos.setText("Mostrar todos");
-        btn_vertodos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_vertodosActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btn_vertodos, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 420, -1, -1));
-
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/camion.png"))); // NOI18N
-        jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 130, 130));
-
-        jLabel43.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel43.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel43.setText("Salida productos:");
-        jPanel3.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, -1, -1));
-
-        jLabel44.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel44.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel44.setText("Codigo:");
-        jPanel3.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, -1, -1));
-
-        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setText("Cantidad:");
-        jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, -1, -1));
-
-        jButton7.setText("Salir");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 420, -1, -1));
-
-        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yalerojo73.png"))); // NOI18N
-        jPanel3.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, -1, -1));
-
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bodeeee.jpg"))); // NOI18N
-        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 480));
-
-        jTabbedPane1.addTab("Ingreso y salida productos", jPanel3);
-
-        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 500));
+        getContentPane().add(panel_pestaña, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -634,15 +649,21 @@ public class revision extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_modificarproducActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        System.exit(0);
+        ultimo ul = new ultimo();
+        ul.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        System.exit(0);
+        ultimo ul = new ultimo();
+        ul.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        System.exit(0);
+       ultimo ul = new ultimo();
+        ul.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -672,6 +693,10 @@ public class revision extends javax.swing.JFrame {
         txt_codigo1.setText("");
         }
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void cb_desbloquearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_desbloquearActionPerformed
+        panel_pestaña.setEnabledAt(2,true);
+    }//GEN-LAST:event_cb_desbloquearActionPerformed
 
     /**
      * @param args the command line arguments
@@ -723,6 +748,7 @@ public class revision extends javax.swing.JFrame {
     private javax.swing.JTextField campo_nusuario;
     private javax.swing.JTextField campo_revisarcodigo;
     private javax.swing.JTextField campo_rut;
+    private javax.swing.JCheckBox cb_desbloquear;
     private javax.swing.JButton dl_user;
     private javax.swing.JTextField dl_userr;
     private javax.swing.JButton jButton1;
@@ -770,7 +796,7 @@ public class revision extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane panel_pestaña;
     private javax.swing.JRadioButton rb_ba;
     private javax.swing.JRadioButton rb_bf;
     private javax.swing.JRadioButton rb_femenino;

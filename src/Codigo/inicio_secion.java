@@ -20,7 +20,7 @@ public class inicio_secion {
     String nombreBD = "Bodega.sqlite";
     String url = "jdbc:sqlite:"+nombreBD;
     
-     public void users(String usuario,String contrasena,int key){
+     public void users(String usuario,String contrasena,int cm){
 //     String user="admin";
 //     String password="123";
     
@@ -31,7 +31,7 @@ public class inicio_secion {
         String sql = "SELECT * FROM USUARIO where NOMBRE_USUARIO='"+usuario+"'and CONTRASENA='"+contrasena+"'";
         resultados = sentencia.executeQuery(sql);
         if (resultados.next()) {
-            key=1;
+            cm=1;
         revision rv = new revision();
         rv.setVisible(true);
 //        registro rr = new registro();
@@ -39,7 +39,7 @@ public class inicio_secion {
         ImageIcon user = new ImageIcon (inicio_secion.class.getResource("/Imagenes/user.png"));
             JOptionPane.showMessageDialog(null,"BIENVENIDO \n" + usuario,"Bienvenida",JOptionPane.DEFAULT_OPTION,user);
         }
-        if (key==0) {
+        if (cm==0) {
             ImageIcon mal = new ImageIcon (inicio_secion.class.getResource("/Imagenes/mal.png"));
             JOptionPane.showMessageDialog(null,"Usuario y/o contraseña incorrecto","Error",JOptionPane.DEFAULT_OPTION,mal);
         registro rr = new registro();

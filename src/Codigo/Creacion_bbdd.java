@@ -248,12 +248,10 @@ public class Creacion_bbdd {
             resultados.close();
             sentencia.close();
             conexion.close();
-            ImageIcon ingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/ingresados.png"));
-            JOptionPane.showMessageDialog(null, "Datos modificados!!",  "MENSAJE", JOptionPane.ERROR_MESSAGE,ingresados);
             
         }catch(ClassNotFoundException | SQLException e){
             ImageIcon noingresados = new ImageIcon (Creacion_bbdd.class.getResource("/Imagenes/noingresados.png"));
-            JOptionPane.showMessageDialog(null, "Error: " + e, 
+            JOptionPane.showMessageDialog(null, "Id invalida", 
                     "Error!!", JOptionPane.ERROR_MESSAGE,noingresados);
         }
     }

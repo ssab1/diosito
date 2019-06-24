@@ -24,6 +24,7 @@ public class registro extends javax.swing.JFrame {
         ImageIcon yalerojo = new ImageIcon (registro.class.getResource("/Imagenes/yalerojo.png"));
         this.setIconImage(yalerojo.getImage());
         this.setTitle("BODEGAS SSAB");
+        setLocationRelativeTo(null);
         ver = new Codigo.inicio_secion();
     }
 
@@ -100,8 +101,8 @@ public class registro extends javax.swing.JFrame {
         try{
         String usuario= campo_usuario.getText();
         String contrasena=campo_contrasena.getText();
-        int key=0;
-        ver.users(usuario, contrasena,key);
+        int cm=0;
+        ver.users(usuario, contrasena,cm);
         this.dispose();
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,"Error: " + e);
@@ -110,7 +111,9 @@ public class registro extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_sesionActionPerformed
 
     private void btn_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salirActionPerformed
-        System.exit(0);
+        ultimo ul = new ultimo();
+        ul.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btn_salirActionPerformed
 
     /**

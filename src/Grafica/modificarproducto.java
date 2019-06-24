@@ -21,10 +21,12 @@ public class modificarproducto extends javax.swing.JFrame {
     Creacion_bbdd cb;
     
     public modificarproducto() {
+        this.setResizable(false);
         initComponents();
         ImageIcon yalerojo = new ImageIcon (modificarproducto.class.getResource("/Imagenes/yalerojo.png"));
         this.setIconImage(yalerojo.getImage());
         this.setTitle("BODEGAS SSAB");
+        setLocationRelativeTo(null);
         cb = new Creacion_bbdd();
     }
 
