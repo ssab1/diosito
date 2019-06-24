@@ -17,10 +17,12 @@ public class ultimo extends javax.swing.JFrame {
      * Creates new form ultimo
      */
     public ultimo() {
-        this.setResizable(false);
         
+         this.setResizable(false);
         initComponents();
+        
         setLocationRelativeTo(null);
+       
         ImageIcon yalerojo = new ImageIcon (nuevamod.class.getResource("/Imagenes/yalerojo.png"));
         this.setIconImage(yalerojo.getImage());
         this.setTitle("BODEGAS SSAB");

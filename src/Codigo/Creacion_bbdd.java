@@ -43,10 +43,12 @@ public class Creacion_bbdd {
             Class.forName(DRIVER);
             conexion = DriverManager.getConnection(URL);
             
+            //crear y nombrar campos de la tabla a crear
             sentencia = conexion.createStatement();
             String sql = "CREATE TABLE TIPO_USUARIO(" +
                     "ID         INTEGER     PRIMARY KEY AUTOINCREMENT, " +
                     "TIPO_USER  TEXT    NOT NULL)";
+            //guardar consulta
             sentencia.executeUpdate(sql);
             sentencia.close();
             conexion.close();
@@ -75,7 +77,7 @@ public class Creacion_bbdd {
         try{
             Class.forName(DRIVER);
             conexion = DriverManager.getConnection(URL);
-            
+            //crear y nombrar campos de la tabla a crear
             sentencia = conexion.createStatement();
             String sql = "CREATE TABLE USUARIO(" +
                     "ID         INTEGER     PRIMARY KEY AUTOINCREMENT, " +
@@ -87,6 +89,7 @@ public class Creacion_bbdd {
                   + "CONTRASENA TEXT    NOT NULL,"
                   + "ID_TIPO    INT    NOT NULL,"
                   + "FOREIGN KEY (ID_TIPO) REFERENCES TIPO_USUARIO(ID))";
+            //guardar consulta 
             sentencia.executeUpdate(sql);
             sentencia.close();
             conexion.close();

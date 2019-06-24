@@ -28,14 +28,18 @@ public class inicio_secion {
         Class.forName(driver);
         conexion = DriverManager.getConnection(url);
         sentencia = conexion.createStatement();
+        //llamar usuarrios y contraseñas
         String sql = "SELECT * FROM USUARIO where NOMBRE_USUARIO='"+usuario+"'and CONTRASENA='"+contrasena+"'";
+        //guargar consulta
         resultados = sentencia.executeQuery(sql);
         if (resultados.next()) {
             cm=1;
+            //llamar ventana a abrir
         revision rv = new revision();
         rv.setVisible(true);
 //        registro rr = new registro();
-//        rr.setVisible(true);
+//        rr.setVisible(true); 
+               //seleccionar y llamar imagen
         ImageIcon user = new ImageIcon (inicio_secion.class.getResource("/Imagenes/user.png"));
             JOptionPane.showMessageDialog(null,"BIENVENIDO \n" + usuario,"Bienvenida",JOptionPane.DEFAULT_OPTION,user);
         }
@@ -46,6 +50,7 @@ public class inicio_secion {
         rr.setVisible(true);
                  
         }
+        //cerrar resultados sentencias etc
         resultados.close();
         sentencia.close();
         conexion.close();
